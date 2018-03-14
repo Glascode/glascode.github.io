@@ -3,3 +3,7 @@
 
 # IDE files
 .idea
+
+# Jekyll files
+_site/
+.sass-cache

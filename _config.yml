@@ -1,0 +1,15 @@
+# Site settings
+title: Glascode
+email: glascode.x@gmail.com
+description: >
+  The Glascode website.
+baseurl: ""
+url: "http://glascode.github.io"
+github_username: glascode
+# Build settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM
+
