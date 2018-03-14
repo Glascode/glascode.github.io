@@ -7,3 +7,6 @@
 # Jekyll files
 _site/
 .sass-cache
+
+# Jekyll serve command file
+run_local.sh

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <!-- Mobile adaptation -->
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1">
+
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <!-- Icon -->
+    <link rel="icon"
+          type="image/png"
+          href="/images/icons/g-icon.png"/>
+
+    <link rel="stylesheet" href="{{ '/css/404.css' | prepend: site.baseurl }}">
+
+</head>
+
+<body>
+<div id="navigation">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="{{ site.url | prepend: site.baseurl }}">Home</a></li>
+                {% for page in site.pages %} {% if page.title %}
+                <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                {% endif %} {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</div>
+<main>
+    <article>
+        {{ content }}
+    </article>
+    {% include footer.html %}
+</main>
+</body>
+
+</html>
