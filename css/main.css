@@ -95,7 +95,9 @@ header {
     margin-bottom: -1px;
 }
 
-#navigation nav ul li a:hover, #navigation nav ul li a:active {
+#navigation nav ul li a:hover,
+#navigation nav ul li a:active,
+#navigation nav ul li a.current {
     text-decoration: none;
     color: #262626;
     background-color: #eee;
