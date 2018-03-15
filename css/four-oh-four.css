@@ -4,6 +4,10 @@
     }
 }
 
+html {
+    background-color: #00a;
+}
+
 body {
     margin: 0;
     color: white;
@@ -64,7 +68,7 @@ time {
     text-decoration: none;
     text-transform: uppercase;
     display: block;
-    padding: .2rem .5rem;
+    padding: .2em .5em;
     line-height: 20px;
     margin-bottom: -1px;
     box-shadow: initial;
@@ -73,18 +77,6 @@ time {
 #navigation nav ul li a:hover, #navigation nav ul li a:active {
     text-decoration: none;
     color: #00a;
-}
-
-#navigation nav:after {
-    content: '';
-    display: table;
-    clear: both;
-}
-
-main {
-    width: 100%;
-    color: #fff;
-    background-color: #00a;
 }
 
 main article {
@@ -106,7 +98,7 @@ main article .whole-page-container h1 {
 main article .whole-page-container h1 span {
     color: #00a;
     background-color: #eee;
-    padding: .1rem .5rem;
+    padding: .1em .3em;
 }
 
 main article .whole-page-container .align-right {
@@ -119,7 +111,10 @@ main article .whole-page-container .align-right {
 }
 
 footer {
-    text-align: center;
-    padding: 40px;
-    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2em 4em;
+    font-size: .6em;
 }
