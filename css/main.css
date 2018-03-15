@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Muli:400,700");
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #262626;
+    font-family: "Muli", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    color: #425469;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    color: #19CCAA;
+    font-size: 2.5em;
+}
+
+h1 a, h1 a:visited {
+    text-decoration: none;
+    color: #19CCAA;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+a, a:visited {
+    color: #425469;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #19CCAA;
+    text-decoration: underline;
+}
+
+header {
+    background: #1D1425;
+    padding: 0 15px;
+    text-align: center;
+    margin: 40px 0 0;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    padding: 0 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+time {
+    color: #898989;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navigation menu */
+
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 1px RGBA(4, 25, 54, 0.1);
+}
+
+#navigation nav {
+    float: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#navigation nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navigation nav ul li {
+    float: left;
+    position: relative;
+}
+
+#navigation nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    font-family: 'Muli', sans-serif;
+    line-height: 20px;
+    margin-bottom: -1px;
+}
+
+#navigation nav ul li a:hover, #navigation nav ul li a:active {
+    background: #1D1425;
+    text-decoration: none;
+    color: #19CCAA;
+}
+
+#navigation nav:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+}

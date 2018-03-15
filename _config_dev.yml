@@ -7,8 +7,6 @@ baseurl: ""
 url: "http://localhost:400"
 github_username: glascode
 # Build settings
-sass:
-  sass_dir: _sass
 include: ['_pages']
 kramdown:
   input: GFM

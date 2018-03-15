@@ -1,0 +1,125 @@
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+body {
+    margin: 0;
+    color: white;
+    font-family: Menlo, "Courier New", monospace;
+    font-size: 1.1em;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:visited {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #00a;
+    background-color: #eee;
+}
+
+time {
+    color: #898989;
+}
+
+.blink {
+    animation: blinker 0.5s linear infinite;
+}
+
+/* Navigation menu */
+#navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+#navigation nav {
+    float: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#navigation nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#navigation nav ul li {
+    float: left;
+    position: relative;
+    padding: 15px;
+}
+
+#navigation nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: .2rem .5rem;
+    line-height: 20px;
+    margin-bottom: -1px;
+    box-shadow: initial;
+}
+
+#navigation nav ul li a:hover, #navigation nav ul li a:active {
+    text-decoration: none;
+    color: #00a;
+}
+
+#navigation nav:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+main {
+    width: 100%;
+    color: #fff;
+    background-color: #00a;
+}
+
+main article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 90vh;
+}
+
+main article .whole-page-container {
+    width: 800px;
+}
+
+main article .whole-page-container h1 {
+    text-align: center;
+}
+
+main article .whole-page-container h1 span {
+    color: #00a;
+    background-color: #eee;
+    padding: .1rem .5rem;
+}
+
+main article .whole-page-container .align-right {
+    text-align: right;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    text-transform: uppercase;
+}
