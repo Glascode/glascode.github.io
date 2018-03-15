@@ -1,16 +1,14 @@
 /*
 Error: Invalid CSS after "...x-highlighting"": expected "{", was ";"
-        on line 7 of main.scss
+        on line 4 of main.scss
 
+1: ---
 2: # Front matter comment to ensure Jekyll properly reads file.
 3: ---
-4: @import
-5:   "base",
-6:   "layout",
-7:   "syntax-highlighting";
+4: @import "base", "layout", "syntax-highlighting";
 
 Backtrace:
-main.scss:7
+main.scss:4
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1278:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1208:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.5.5/lib/sass/scss/parser.rb:1203:in `tok!'
@@ -39,4 +37,4 @@ main.scss:7
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...x-highlighting\"\": expected \"{\", was \";\"\A         on line 7 of main.scss\A \A 2: # Front matter comment to ensure Jekyll properly reads file.\A 3: ---\A 4: @import\A 5:   \"base\",\A 6:   \"layout\",\A 7:   \"syntax-highlighting\";"; }
+  content: "Error: Invalid CSS after \"...x-highlighting\"\": expected \"{\", was \";\"\A         on line 4 of main.scss\A \A 1: ---\A 2: # Front matter comment to ensure Jekyll properly reads file.\A 3: ---\A 4: @import \"base\", \"layout\", \"syntax-highlighting\";"; }
