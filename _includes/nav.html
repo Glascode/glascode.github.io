@@ -1,13 +1,14 @@
 <div id="navigation">
-    <div class="container">
-        <nav>
-            <ul>
-                {% for item in site.data.categories %} {% if page.title == item.title %}
-                <li><a href="{{ item.url }}" alt="{{ item.title }}" class="current">{{ item.title }}</a></li>
-                {% else %}
-                <li><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
-                {% endif %} {% endfor %}
-            </ul>
-        </nav>
-    </div>
+    <nav>
+        <ul>
+            {% for item in site.data.categories %} {% if page.title ==
+            item.title %}
+            <li><a href="{{ item.url }}" alt="{{ item.title }}" class="current">{{
+                item.title }}</a></li>
+            {% else %}
+            <li><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title
+                }}</a></li>
+            {% endif %} {% endfor %}
+        </ul>
+    </nav>
 </div>

@@ -4,6 +4,4 @@ title: Contact
 permalink: /contact
 ---
 
-Contact content goes here.
-
-My e-mail is [glascode.x@gmail.com](mailto:glascode.x@gmail.com).
+Contact content goes here <span class="blink">_</span>

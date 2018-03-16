@@ -1,7 +1,12 @@
 @keyframes blinker {
-    50% {
-        opacity: 0;
+    to {
+        visibility: hidden;
     }
+}
+
+.blink {
+    /*animation: blinker 0.5s linear infinite;*/
+    animation: blinker 1s steps(2, start) infinite;
 }
 
 html {
@@ -11,7 +16,7 @@ html {
 body {
     margin: 0;
     color: white;
-    font-family: Menlo, "Courier New", monospace;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.1em;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -31,10 +36,6 @@ a:hover {
 
 time {
     color: #898989;
-}
-
-.blink {
-    animation: blinker 0.5s linear infinite;
 }
 
 /* Navigation menu */
@@ -83,7 +84,6 @@ main article {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     height: 90vh;
 }
 

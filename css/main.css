@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Muli:400,700");
 
+@keyframes blinker {
+    to {
+        visibility: hidden;
+    }
+}
+
+.blink {
+    animation: blinker 1s steps(2, start) infinite;
+}
+
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -13,28 +23,17 @@ html {
 body {
     margin: 0;
     color: #fff;
-    font-family: Menlo, Muli, sans-serif;
-    font-size: 1.1em;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 17px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-    font-size: 1em;
-}
-
-h1 a, h1 a:visited {
-    text-decoration: none;
-}
-
-h2 {
-    font-size: 2em;
+    padding-bottom: 7em;  /* prevent content from hitting the footer */
 }
 
 h2, h3 {
     font-weight: 600;
     color: #fff;
-    font-family: Menlo, Montserrat, sans-serif;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     line-height: 1.5;
 }
 
@@ -55,7 +54,23 @@ a:hover {
 }
 
 header {
+    position: fixed;
+    padding: 1em;
     background: darkmagenta;
+    z-index: 3;
+}
+
+header:hover {
+    background: #570057;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1em;
+}
+
+h1 a, h1 a:visited {
+    text-decoration: none;
 }
 
 /* Navigation menu */
@@ -64,11 +79,9 @@ header {
     background: #262626;
     z-index: 2;
     width: 100%;
-    box-shadow: 0 1px 1px RGBA(4, 25, 54, 0.1);
 }
 
 #navigation nav {
-    float: left;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -82,7 +95,7 @@ header {
 #navigation nav ul li {
     float: left;
     position: relative;
-    padding: 15px;
+    padding: 1em;
 }
 
 #navigation nav ul li a {
@@ -90,7 +103,7 @@ header {
     text-decoration: none;
     display: block;
     padding: .2em .5em;
-    font-family: Menlo, Muli, sans-serif;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     line-height: 20px;
     margin-bottom: -1px;
 }
@@ -112,18 +125,13 @@ header {
 /* Content */
 
 main {
+    margin: 0 auto;
     padding: 0 15px;
     max-width: 800px;
-    margin: 0 auto;
 }
 
 time {
     color: #898989;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
 }
 
 /* Footer */
@@ -134,8 +142,8 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 2em 4em;
-    font-size: .6em;
+    padding: 1em 4em;
+    font-size: .7em;
     border-top: 1px solid #fff;
     background-color: #262626;
 }
