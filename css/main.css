@@ -27,7 +27,7 @@ body {
     font-size: 17px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    padding-bottom: 7em;  /* prevent content from hitting the footer */
+    padding-bottom: 7em; /* prevent content from hitting the footer */
 }
 
 h2, h3 {
@@ -40,11 +40,10 @@ h2, h3 {
 a, a:visited {
     color: #fff;
     text-decoration: underline;
-    font-weight: bold;
 }
 
 a:hover {
-    color: #19CCAA;
+    color: #d62d3d;
     text-decoration: underline;
 }
 
@@ -54,14 +53,9 @@ a:hover {
 }
 
 header {
-    position: fixed;
-    padding: 1em;
-    background: darkmagenta;
+    width: 200px;
+    text-align: center;
     z-index: 3;
-}
-
-header:hover {
-    background: #570057;
 }
 
 header h1 {
@@ -70,19 +64,33 @@ header h1 {
 }
 
 h1 a, h1 a:visited {
+    display: block;
+    padding: .9em;
     text-decoration: none;
+    background-color: #a82330;
+    border: 1px solid #a82330;
+    -webkit-transition: background-color 0.1s;
+    -moz-transition: background-color 0.1s;
+    -o-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+}
+
+h1 a:hover {
+    color: #eee;
+    text-decoration: none;
+    background-color: #851c26;
+    border: 1px solid #851c26;
 }
 
 /* Navigation menu */
 
 #navigation {
-    background: #262626;
     z-index: 2;
     width: 100%;
 }
 
 #navigation nav {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -104,6 +112,7 @@ h1 a, h1 a:visited {
     display: block;
     padding: .2em .5em;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    text-transform: uppercase;
     line-height: 20px;
     margin-bottom: -1px;
 }
