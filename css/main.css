@@ -29,6 +29,16 @@ body {
     padding-bottom: 7em; /* prevent content from hitting the footer */
 }
 
+::selection {
+    color: #262626;
+    background: #ffe211; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    color: #262626;
+    background: #ffe211; /* Gecko Browsers */
+}
+
 a, a:visited {
     color: #fff;
     text-decoration: underline;
