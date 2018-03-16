@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Work
-permalink: /work/
+permalink: /work
 ---
 
 Download the lecture of Algebraic structures [here][1] <span class="blink">_</span>
