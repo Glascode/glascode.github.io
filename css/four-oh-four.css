@@ -49,7 +49,7 @@ time {
 }
 
 /* Navigation menu */
-#navigation {
+#nav-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -57,25 +57,25 @@ time {
     z-index: 2;
 }
 
-#navigation nav {
+#nav-container nav {
     float: left;
     max-width: 800px;
     margin: 0 auto;
 }
 
-#navigation nav ul {
+#nav-container nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-#navigation nav ul li {
+#nav-container nav ul li {
     float: left;
     position: relative;
     padding: 15px;
 }
 
-#navigation nav ul li a {
+#nav-container nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
     display: block;
@@ -85,7 +85,7 @@ time {
     box-shadow: initial;
 }
 
-#navigation nav ul li a:hover, #navigation nav ul li a:active {
+#nav-container nav ul li a:hover, #nav-container nav ul li a:active {
     text-decoration: none;
     color: #00a;
 }
