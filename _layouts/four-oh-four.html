@@ -7,36 +7,51 @@
           content="width=device-width,
                    initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif
+        %}</title>
 
     <!-- Icon -->
     <link rel="icon"
           type="image/png"
           href="/images/icons/g-icon.png"/>
 
-    <link rel="stylesheet" href="{{ '/css/four-oh-four.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet"
+          href="{{ '/css/four-oh-four.css' | prepend: site.baseurl }}">
 
 </head>
 
 <body>
-<div id="navigation">
-    <div class="container">
+<div class="header-container">
+    <div class="nav-container">
+        <span class="nav-mobile">
+            <a id="nav-toggle"><span></span></a>
+        </span>
         <nav>
             <ul>
-                <li><a href="{{ site.url | prepend: site.baseurl }}">Home</a></li>
+                <li>
+                    <a href="{{ site.url | prepend: site.baseurl }}">Home</a>
+                </li>
                 {% for item in site.data.categories %}
-                <li><a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a></li>
+                <li>
+                    <a href="{{ item.url }}" alt="{{ item.title }}">
+                        {{ item.title }}
+                    </a>
+                </li>
                 {% endfor %}
             </ul>
         </nav>
     </div>
 </div>
+
 <main>
     <article>
         {{ content }}
     </article>
     {% include footer.html %}
 </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/scripts/nav.js"></script>
 </body>
 
 </html>

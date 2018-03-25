@@ -10,7 +10,7 @@
 
 html {
     line-height: 1.6;
-    background: #262626;
+    color: #262626;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-box-sizing: border-box;
@@ -26,25 +26,26 @@ html {
 
 body {
     margin: 0;
-    color: #fff;
     font-family: "SFMono-Regular", "Fira Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 17px;
     padding-bottom: 7em; /* prevent content from hitting the footer */
 }
 
+/* WebKit/Blink Browsers */
 ::selection {
     color: #262626;
-    background: #ffe211; /* WebKit/Blink Browsers */
+    background: #ffe211;
 }
 
+/* Gecko Browsers */
 ::-moz-selection {
     color: #262626;
-    background: #ffe211; /* Gecko Browsers */
+    background: #ffe211;
 }
 
 a, a:visited {
-    color: #fff;
-    text-decoration: underline;
+    color: #178cd6;
+    text-decoration: none;
 }
 
 a:hover {
@@ -91,7 +92,6 @@ header h1 a:hover {
 
 h2, h3, h4, h5 {
     line-height: 1.2;
-    color: #fff;
 }
 
 /* Navigation menu */
@@ -124,7 +124,7 @@ h2, h3, h4, h5 {
     display: block;
     padding: .2em .5em;
     line-height: 20px;
-    color: #eee;
+    color: currentColor;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -133,8 +133,8 @@ h2, h3, h4, h5 {
 .nav-container nav ul li a:active,
 .nav-container nav ul li a.current {
     text-decoration: none;
-    color: #262626;
-    background-color: #eee;
+    color: #fff;
+    background-color: #262626;
 }
 
 /* Mobile navigation */
@@ -146,6 +146,13 @@ h2, h3, h4, h5 {
     height: 60px;
     width: 60px;
     z-index: 2;
+}
+
+@media screen and (min-width: 800px) {
+    /* Display the nav even after a mobile toggle */
+    .nav-container nav ul {
+        display: flex !important;
+    }
 }
 
 /* Mobile style */
@@ -196,7 +203,7 @@ h2, h3, h4, h5 {
     width: 30px;
     height: 4px;
     left: 0;
-    background-color: currentColor;
+    background-color: #262626;
     transition: all .3s;
 }
 
@@ -235,8 +242,7 @@ main {
 
 /* Footer */
 footer {
-    /*position: absolute;*/
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;

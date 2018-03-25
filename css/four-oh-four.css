@@ -10,16 +10,26 @@
 }
 
 html {
+    line-height: 1.6;
     background-color: #00a;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
     margin: 0;
-    color: white;
+    color: #fff;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.1em;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
@@ -32,8 +42,7 @@ body {
     background: #ffe211; /* Gecko Browsers */
 }
 
-a,
-a:visited {
+a, a:visited {
     color: #fff;
     text-decoration: underline;
     font-weight: bold;
@@ -44,80 +53,202 @@ a:hover {
     background-color: #eee;
 }
 
-time {
-    color: #898989;
+.header-container {
+    display: flex;
+    width: 100%;
 }
 
 /* Navigation menu */
-#nav-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+.nav-container {
+    line-height: 60px;
     width: 100%;
     z-index: 2;
 }
 
-#nav-container nav {
-    float: left;
+.nav-container nav {
     max-width: 800px;
     margin: 0 auto;
 }
 
-#nav-container nav ul {
-    margin: 0;
+.nav-container nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
 }
 
-#nav-container nav ul li {
+.nav-container nav ul li {
     float: left;
     position: relative;
-    padding: 15px;
+    padding: 1em;
 }
 
-#nav-container nav ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
+.nav-container nav ul li a {
     display: block;
     padding: .2em .5em;
     line-height: 20px;
-    margin-bottom: -1px;
-    box-shadow: initial;
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
-#nav-container nav ul li a:hover, #nav-container nav ul li a:active {
+.nav-container nav ul li a:hover,
+.nav-container nav ul li a:active,
+.nav-container nav ul li a.current {
     text-decoration: none;
     color: #00a;
+    background-color: #eee;
+}
+
+/* Mobile navigation */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 60px;
+    width: 60px;
+    z-index: 2;
+}
+
+@media screen and (min-width: 800px) {
+    /* Display the nav even after a mobile toggle */
+    .nav-container nav ul {
+        display: flex !important;
+    }
+}
+
+/* Mobile style */
+@media screen and (max-width: 800px) {
+    /* Display the hamburger nav-toggle button */
+    .nav-mobile {
+        display: block;
+    }
+
+    .nav-container nav {
+        width: 100%;
+        padding: 60px 0 15px;
+    }
+
+    .nav-container nav ul {
+        display: none;
+    }
+
+    .nav-container nav ul li {
+        float: none;
+        padding: 0 0 2px 0;
+    }
+
+    .nav-container nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+    }
+}
+
+/* Nav toggle hamburger button */
+#nav-toggle {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    padding: 10px 30px 14px 0;
+    cursor: pointer;
+}
+
+#nav-toggle:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+#nav-toggle span,
+#nav-toggle span::before,
+#nav-toggle span::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    left: 0;
+    background-color: currentColor;
+    transition: all .3s;
+}
+
+#nav-toggle span::before {
+    top: -10px;
+}
+
+#nav-toggle span::after {
+    top: 10px;
+}
+
+#nav-toggle.active span {
+    background-color: transparent;
+}
+
+#nav-toggle.active span::before {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    -moz-transform: translateY(10px) rotate(45deg);
+    -ms-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+}
+
+#nav-toggle.active span::after {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    -moz-transform: translateY(-10px) rotate(-45deg);
+    -ms-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+main {
+    padding-bottom: 70px;
 }
 
 main article {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    padding: 20px;
+    /*height: 90vh;*/
 }
 
 main article .whole-page-container {
     width: 800px;
 }
 
-main article .whole-page-container h1 {
+main article h1 {
     text-align: center;
 }
 
-main article .whole-page-container h1 span {
+main article h1 span {
     color: #00a;
     background-color: #eee;
     padding: .1em .3em;
 }
 
-main article .whole-page-container .align-right {
-    text-align: right;
+main article ul {
+    list-style: none;
+    padding: 0;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+main article ul li {
+    /* handle multiline */
+    overflow: visible;
+    padding-left: 17px;
+    position: relative;
+}
+
+main article ul li:before {
+    content: '*';
+    left: 0;
+    position: absolute;
+}
+
+main article ul li span {
+    position: relative;
+    left: 16px;
+}
+
+main article .align-right {
+    text-align: right;
 }
 
 footer {
@@ -127,4 +258,5 @@ footer {
     right: 0;
     padding: 2em 4em;
     font-size: .6em;
+    background-color: gray;
 }
