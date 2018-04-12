@@ -1,22 +1,62 @@
 $(document).ready(function () {
+    const SHIFT = 4;
 
-    /* Drop-down menu (narrow width only) */
-    var navContainer = $(".nav-container");
-    var navToggle = $('#nav-toggle');
+    /* Insert slider */
+    $("ul").append('<div id="slider"></div>');
 
-    /* Clicking away from dropdown will remove the dropdown class */
-    // $("html").on("click", function () {
-    //     $(".active nav").hide();
-    // });
+    var slider = $("#slider");
+    var currentLink = $('nav ul li a.current');
+    var top = currentLink.parent().position().top + SHIFT;
+    var width = currentLink.css("width");
+    var height = currentLink.css("height");
 
-    /* Toggle open and close nav styles on click */
-    navToggle.on("click", function () {
-        $("nav ul").slideToggle();
+    currentLink.css("color", "white");
+
+    /* Positioning the slider */
+    slider.css({
+        "top": top,
+        "width": width,
+        "height": height
     });
 
-    /* Hamburger to X toggle */
-    navToggle.on("click", function() {
-        this.classList.toggle("active");
+    /* Sliding */
+    var link = $('ul li a');
+    link.mouseover(function () {
+        var top = $(this).parent().position().top + SHIFT;
+        var width = $(this).css("width");
+
+        /* Change colours */
+        $(this).css("color", "white");
+        if ($(this).attr("class") !== "current") {
+            currentLink.css("color", "currentColor");
+        } else {
+            currentLink.css("color", "white");
+        }
+
+        /* Move slider */
+        slider.stop().animate({
+            "top": top,
+            "width": width
+        }, "fast");
     });
+
+    /* Replace slider on the current link */
+    link.mouseout(function () {
+
+        /* Reset variables according to the current link */
+        var top = currentLink.parent().position().top + SHIFT;
+        var width = currentLink.css("width");
+
+        /* Reset the colours */
+        $(this).css("color", "currentColor");
+        currentLink.css("color", "white");
+
+        /* Move slider */
+        slider.stop().animate({
+            "top": top,
+            "width": width
+        }, "fast");
+    });
+
 
 });
