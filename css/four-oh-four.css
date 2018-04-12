@@ -193,6 +193,7 @@ main h2 i.material-icons {
 
 @media screen and (max-width: 800px) {
     body {
+        color: #111111;
         padding: 2em 0 0;
     }
 
@@ -247,7 +248,7 @@ main h2 i.material-icons {
     nav h3 {
         margin: auto;
         padding: 0;
-        color: #333333;
+        color: currentColor;
         font-size: 1.3em;
         text-transform: initial;
     }
@@ -256,10 +257,12 @@ main h2 i.material-icons {
         padding: initial;
     }
 
-    nav ul li a {
+    nav ul li a,
+    nav ul li a:visited {
         display: block;
         width: 100%;
         padding: 1em 0 1em .2em;
+        color: currentColor;
         border-top: 1px solid #dfdfdf;
     }
 
