@@ -15,18 +15,29 @@
           type="image/png"
           href="{{ '/images/icons/g-icon.png' | prepend: site.baseurl }}"/>
 
+    <!-- General style -->
     <link rel="stylesheet"
           href="{{ '/css/four-oh-four.css' | prepend: site.baseurl }}">
+
+    <!-- Google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="window">
-    <div class="close-buttons">
-        <span class="circle-button unavailable"></span>
-        <span class="circle-button partially-available"></span>
-        <span class="circle-button available"></span>
+<div class="mac-window">
+    <div class="status-buttons">
+        <span class="status-button unavailable" title="Close">
+            <i class="material-icons">close</i>
+        </span>
+        <span class="status-button partially-available" title="Minimize">
+            <i class="material-icons">remove</i>
+        </span>
+        <span class="status-button available" title="Zoom">
+            <i class="material-icons">add</i>
+        </span>
     </div>
     <nav>
         <h3>Categories</h3>
@@ -45,9 +56,7 @@
     </nav>
 
     <main>
-        <article>
-            {{ content }}
-        </article>
+        {{ content }}
     </main>
 </div>
 
