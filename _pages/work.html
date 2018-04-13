@@ -4,20 +4,20 @@ title: Work
 permalink: /work
 ---
 
-<div class="directory">
-    <div class="folder">
+<div class="components">
+    <a class="folder" href="{{ site.url }}">
         <h4>Home</h4>
-    </div>
+    </a>
 
-    <div class="folder">
+    <a class="folder" href="{{ '/about' | prepend: site.baseurl }}">
         <h4>About</h4>
-    </div>
+    </a>
 
-    <div class="folder">
+    <a class="folder" href="{{ '/contact' | prepend: site.baseurl }}">
         <h4>Contact</h4>
-    </div>
+    </a>
 
-    <a href="{{ site.url }}/resources/sa.pdf" class="file pdf">
+    <a class="file pdf" href="{{ site.url }}/resources/sa.pdf">
         <h4>Structures algébriques</h4>
         <p>Un ensemble est une collection d’objets (de nombres, de
             personnes, etc.). Soit X un...</p>
@@ -28,4 +28,9 @@ permalink: /work
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Curabitur ullamcorper ex lorem...</p>
     </div>
+
+    <figure class="picture">
+        <img src="{{ '/images/flowers.jpg' | prepend: site.baseurl }}">
+        <figcaption>Photo - 2018</figcaption>
+    </figure>
 </div>

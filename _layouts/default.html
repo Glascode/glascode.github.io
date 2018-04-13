@@ -4,10 +4,8 @@
 
 <body>
 
-{% include nav.html %}
-
 <main>
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    {% include nav.html %}
     {{ content }}
 </main>
 
