@@ -219,10 +219,12 @@ nav ul li a:visited {
     border-top-right-radius: 5px;
 }
 
-.file p {
+.file p,
+.file pre {
     padding-top: .3em;
     font-size: .9em;
     color: #999;
+    overflow: hidden;
 }
 
 .folder:hover {
@@ -238,7 +240,7 @@ nav ul li a:visited {
 }
 
 .file.pdf:after {
-    content: 'PDF';
+    content: "PDF";
     background-color: #e23945;
 }
 
@@ -247,11 +249,24 @@ nav ul li a:visited {
 }
 
 .file.word:after {
-    content: 'W';
+    content: "W";
     background-color: #2e5898;
 }
 
-/* Footer */
+.file.python {
+    border-color: #2e5a81;
+}
+
+.file.python:after {
+    content: "py";
+    background-color: #2e5a81;
+}
+
+.file pre {
+    overflow: hidden;
+}
+
+    /* Footer */
 footer {
     flex-shrink: 0;
     padding: 5em 4em;
