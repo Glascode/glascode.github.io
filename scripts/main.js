@@ -58,5 +58,11 @@ $(document).ready(function () {
         }, "fast");
     });
 
+    /* Initialise grid Masonry */
+    $('.grid').masonry({
+        // options
+        itemSelector: '.grid-item'
+    });
+
 
 });

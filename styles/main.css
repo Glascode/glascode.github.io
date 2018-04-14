@@ -129,11 +129,6 @@ nav ul li a:visited {
     box-shadow: -5px 0 20px -5px #eee;
 }
 
-.components {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .folder,
 .file,
 .picture {
@@ -175,16 +170,6 @@ nav ul li a:visited {
     margin: -75px 0 0 -400px;
     -webkit-filter: brightness(90%);
 }
-
-/*.picture::after {*/
-    /*content: '';*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background: rgba(0, 0, 0, 0.1);*/
-/*}*/
 
 .picture figcaption {
     position: absolute;
@@ -235,6 +220,15 @@ nav ul li a:visited {
     transform: scale(1.03);
 }
 
+.file.excel {
+    border-color: #3a8135;
+}
+
+.file.excel:after {
+    content: "X";
+    background-color: #3a8135;
+}
+
 .file.pdf {
     border-color: #e23945;
 }
@@ -244,15 +238,6 @@ nav ul li a:visited {
     background-color: #e23945;
 }
 
-.file.word {
-    border-color: #2e5898;
-}
-
-.file.word:after {
-    content: "W";
-    background-color: #2e5898;
-}
-
 .file.python {
     border-color: #2e5a81;
 }
@@ -260,6 +245,15 @@ nav ul li a:visited {
 .file.python:after {
     content: "py";
     background-color: #2e5a81;
+}
+
+.file.word {
+    border-color: #2e5898;
+}
+
+.file.word:after {
+    content: "W";
+    background-color: #2e5898;
 }
 
 .file pre {
