@@ -1,14 +1,3 @@
-@keyframes blinker {
-    to {
-        visibility: hidden;
-    }
-}
-
-.blink {
-    /*animation: blinker 0.5s linear infinite;*/
-    animation: blinker 1s steps(2, start) infinite;
-}
-
 html {
     color: #333333;
     -webkit-font-smoothing: antialiased;
@@ -36,82 +25,13 @@ html {
 
 body {
     margin: 0;
+    height: 100vh;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
     Helvetica, Roboto, "Segoe UI", Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.mac-window {
-    position: relative;
-    display: flex;
-    width: 50%;
-    height: 400px;
-    min-width: 700px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 30px 100px #ccc;
-    background-color: #fcfcfc;
-}
-
-.status-buttons {
-    position: absolute;
-    top: 24px;
-    left: 24px;
-    width: calc(3 * 12px + 2 * 15px);
-    height: 12px;
-}
-
-.status-button {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 100%;
-    background-color: #E1E1E1;
-}
-
-.status-button i {
-    position: absolute;
-    font-size: 10px;
-    display: none;
-    cursor: default;
-}
-
-.active .status-button i {
-    display: block;
-}
-
-.status-button.unavailable {
-    border: 1px solid #e14745;
-    background-color: #fa4b49;
-}
-
-.status-button.unavailable i {
-    color: #751112;
-}
-
-.status-button.partially-available {
-    border: 1px solid #ebaf3e;
-    background-color: #fdbe41;
-    left: calc(12px + 15px);
-}
-
-.status-button.partially-available i {
-    color: #985712;
-}
-
-.status-button.available {
-    border: 1px solid #32b447;
-    background-color: #34c849;
-    left: calc((12px + 15px) * 2);
-}
-
-.status-button.available i {
-    color: #0a630c;
 }
 
 /* Navigation */
@@ -176,41 +96,24 @@ main h2 i.material-icons {
     display: none;
 }
 
-.help-icon {
-    position: absolute;
-    bottom: 25px;
-    right: 30px;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border: 1px solid lightgray;
-    font-weight: 500;
-    color: #2a9ced;
-    background-color: #fff;
-    cursor: default;
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     body {
         color: #111111;
         padding: 2em 0 0;
     }
 
-    .status-button {
+    .status-buttons {
         display: none;
     }
 
-    .mac-window {
+    .finder-window {
         padding: 0 0 0 1em;
         width: 100%;
         flex-direction: column;
         background-color: #fff;
     }
 
-    .mac-window, main {
+    .finder-window, main {
         box-shadow: none;
     }
 
