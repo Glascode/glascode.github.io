@@ -53,25 +53,50 @@
     position: absolute;
     right: 3em;
     bottom: 25px;
-    width: fit-content;
     min-width: 7em;
-    padding: .5em;
+    padding: .5em 1em;
     border-radius: 2em;
     text-align: center;
-    color: #ffffff;
     font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(to bottom right, #2da6fc 0%, #2ed5fd 51%, #2da6fc 100%);
+    background-size: 200% auto;
     box-shadow: 5px 5px 50px rgba(45, 166, 252, 0.3);
-    background: linear-gradient(to bottom right, #2da6fc, #2ed5fd);
+    text-decoration: none;
+    transition: 0.5s;
 }
 
-.finder-button a {
-    padding: .5em;
-    border-radius: 2em;
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    animation: slide 10s linear;
+.finder-button:hover {
+    color: #fff;
+    cursor: pointer;
+    background-position: right center;
 }
+
+.finder-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(to top left, #fc1828, #2ed5fd);
+    -webkit-border-radius: inherit;
+    -moz-border-radius: inherit;
+    border-radius: inherit;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+/*
+.finder-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+*/
 
 .help-icon {
     position: absolute;
