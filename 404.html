@@ -1,10 +1,13 @@
 ---
 layout: default
-title: Page not found - Glascode
+title: Page not found
 ---
 
-<h2>Error 404</h2>
-<h1>Page not found</h1>
-<p>Sorry, the page you're looking for can't be found.</p>
-<span class="help-icon"></span>
-<a class="finder-button" href="{{ site.url }}">Return home</a>
+<link rel="stylesheet" href="{{ '/styles/404.css' | prepend: site.baseurl }}">
+
+<div style="text-align: center; margin: 3em auto">
+    <div style="font-size: 3em">Oops!</div>
+    <p>The page you're looking for can't be found.</p>
+</div>
+
+<a class="button light center" href="{{ site.url }}">Return home</a>
