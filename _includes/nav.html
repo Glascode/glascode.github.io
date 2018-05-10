@@ -1,16 +1,16 @@
-<nav>
-    <ul>
-        {% for item in site.data.categories %}
-        {% if page.title == item.title %}
-        <li>
-            <a href="{{ item.url }}" alt="{{ item.title }}" class="current">
-                {{ item.title }}
+<nav class="navigation">
+    <ul class="nav--list">
+        {% for category in site.data.categories %}
+        {% if page.id == category.id %}
+        <li class="nav--item">
+            <a class="nav--link current" href="{{ category.url }}">
+                {{ category.title }}
             </a>
         </li>
         {% else %}
-        <li>
-            <a href="{{ item.url }}" alt="{{ item.title }}">
-                {{ item.title }}
+        <li class="nav--item">
+            <a class="nav--link" href="{{ category.url }}">
+                {{ category.title }}
             </a>
         </li>
         {% endif %} {% endfor %}

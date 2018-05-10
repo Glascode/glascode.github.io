@@ -1,8 +1,11 @@
 - title: Work
   url: /work
+  id: work
 
 - title: About
   url: /about
+  id: about
 
 - title: Contact
   url: /contact
+  id: contact
