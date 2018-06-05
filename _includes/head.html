@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>
-        {% if page.title %}
+        {% if page.title and page.id != "home" %}
         {{ " | Glascode" | prepend: page.title }}
         {% else %}
         {{ site.title }}
@@ -20,7 +20,11 @@
           crossorigin="anonymous">
     <link rel="stylesheet"
           href="{{ '/styles/main.css' | prepend: site.baseurl }}">
-
     <link rel="stylesheet"
           href="{{ '/styles/syntax.css' | prepend: site.baseurl }}">
+    {% if page.style %}
+    {% capture stylelink %}/styles/{{ page.style }}.css{% endcapture %}
+    <link rel="stylesheet"
+          href="{{ stylelink | prepend: site.baseurl }}">
+    {% endif %}
 </head>
