@@ -1,5 +1,7 @@
 :root {
-    --main-color: #333333;
+    --dark-color: #333333;
+    --light-color: white;
+    --background-color: var(--light-color);
 }
 
 *, *::before, *::after {
@@ -20,15 +22,11 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 16px;
     font-weight: 300;
-    color: var(--main-color);
+    color: var(--dark-color);
 }
 
 main {
     flex: 1;
-}
-
-.content {
-    padding-bottom: 50px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -97,39 +95,36 @@ p, .link {
 }
 
 .button.light:hover {
-    color: #333333;
-    background: white;
-}
-
-.button.center {
-    margin: 0 auto;
+    color: var(--dark-color);
+    background: var(--light-color);
 }
 
 .header {
-    text-align: center;
-    border-bottom: 1px solid gainsboro;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3em 5em;
+    z-index: 1;
 }
 
 .site-title {
-    padding: .5em 0;
-    font-size: 3em;
-    font-family: Raleway, sans-serif;
+    position: absolute;
+    top: 9.5rem;
+    left: 5rem;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
     text-transform: uppercase;
+    transform: rotate(-90deg);
     letter-spacing: 5px;
 }
 
-.page-title {
-    font-family: "Playfair Display", serif;
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-
 .navigation {
-    width: 100%;
     padding: 1em 0;
-    font-family: Raleway, sans-serif;
-    text-transform: uppercase;
+    font-family: Fira Mono, sans-serif;
 }
 
 .nav--list {
@@ -168,8 +163,16 @@ p, .link {
 }
 
 .content {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.page-title {
+    font-family: "Playfair Display", serif;
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 3rem;
 }
 
 .footer {
