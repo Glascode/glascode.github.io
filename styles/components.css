@@ -93,7 +93,7 @@ button {
 }
 
 .arrow-button::after {
-    content: '\2192';
+    content: '\2192'; /* right arrow */
     display: inline-block;
     vertical-align: middle;
     margin-left: .5em;

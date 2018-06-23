@@ -6,3 +6,7 @@ body {
     color: white;
     background: var(--background-color);
 }
+
+.content {
+    margin-left: -100px;
+}
