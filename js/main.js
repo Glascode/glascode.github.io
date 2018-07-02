@@ -1,7 +1,3 @@
-$(document).ready(function () {
-    initPage();
-});
-
 function initPage() {
 
     /* Cache selectors */
@@ -61,9 +57,14 @@ function initPage() {
 
         /* Header shadow */
         if ($(window).scrollTop() > 0) {
-            $header.css("box-shadow", "none");
-        } else {
             $header.css("box-shadow", "0 0 1px rgba(0, 0, 0, 0.25)");
+        } else {
+            $header.css("box-shadow", "none");
         }
     });
+
 }
+
+$(document).ready(function () {
+    initPage();
+});

@@ -22,7 +22,8 @@ id: home
 <section id="about" class="section">
     <h2 class="section-title">À propos</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut
-        <a href="#">pharetra</a> orci. Nullam a luctus quam. Duis quis aliquet eros, nec
+        <a href="#">pharetra</a> orci. Nullam a luctus quam. Duis quis aliquet
+        eros, nec
         consequat nulla. Vivamus sed augue nunc. Duis vitae nulla ac est
         consectetur sollicitudin id in risus. Proin varius lacus quis risus
         molestie blandit. Vestibulum molestie libero at urna finibus volutpat.
@@ -47,14 +48,17 @@ id: home
                    placeholder="Votre nom" required>
         </label><br>
         <label for="email">
-            <input class="form-field input" type="text" name="email" id="email"
-                   placeholder="Votre email" required>
+            <input class="form-field input" type="email" name="email" id="email"
+                   placeholder="Votre email" required
+                   pattern="^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$">
+            <span class="requirement">
+                Veuillez fournir une adresse email valide
+            </span>
         </label><br>
         <label for="message">
             <textarea class="form-field textarea" name="message" cols="60"
-                      rows="10"
-                      wrap="hard" id="message" placeholder="Votre message"
-                      required></textarea>
+                      rows="10" wrap="hard" id="message"
+                      placeholder="Votre message" required></textarea>
         </label><br>
 
         <input class="button" type="submit" name="submit" value="Envoyer">

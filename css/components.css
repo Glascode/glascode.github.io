@@ -15,11 +15,37 @@ textarea { /* initial style */
     margin-bottom: 16px;
     color: currentColor;
     border: 1px solid var(--line-color);
-    border-radius: 3px;
+    outline: none;
+    transition: border-color .3s;
+}
+
+.requirement {
+    opacity: 0;
+    margin-left: 1em;
+    font-size: .8em;
+    font-style: italic;
+    color: var(--red);
+    transition: opacity .3s;
+}
+
+.form-field:valid {
+    border-color: var(--green);
+}
+
+.form-field:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--red);
+}
+
+.form-field:invalid:not(:focus):not(:placeholder-shown) ~ .requirement {
+    opacity: 1;
 }
 
 .textarea {
     resize: none;
+}
+
+.form-field, .button {
+    border-radius: 3px;
 }
 
 .button {
@@ -29,17 +55,15 @@ textarea { /* initial style */
     padding: 1em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: all .15s;
-    color: var(--light-color);
+    color: white;
     background: var(--dark-color);
     border: 1px solid var(--dark-color);
     cursor: pointer;
+    transition: background-color .15s;
 }
 
 .button:hover {
-    color: var(--dark-color);
-    background: var(--light-color);
-    border: 1px solid var(--dark-color);
+    background: #203041;
 }
 
 .button.light {
