@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    initPage();
+});
+
+function initPage() {
 
     /* Cache selectors */
     var lastId;
@@ -20,26 +24,30 @@ $(document).ready(function () {
 
     // Bind click handler to menu items
     // so we can get a fancy scroll animation
+    const SCROLL_SPEED = 300;
     $navLinks.click(function (e) {
         var href = $(this).attr("href");
         var offsetTop = href === "#" ? 0 : $(href).offset().top - $headerHeight + 1;
         $("html, body").stop().animate({
             scrollTop: offsetTop
-        }, 850);
+        }, SCROLL_SPEED);
         e.preventDefault();
     });
 
     /* Bind to scroll */
     $(window).scroll(function () {
-        // Get container scroll position
+
+        /* Get container scroll position */
         var $windowTop = $(this).scrollTop() + $headerHeight;
-        const SHIFT = 200;
-        // Get id of current scroll item
+
+        /* Get id of current scroll item */
         var cur = scrollItems.map(function () {
-            if ($(this).offset().top < $windowTop + SHIFT)
+            if ($(this).offset().top < $windowTop) {
                 return this;
+            }
         });
-        // Get the id of the current element
+
+        /* Get the id of the current element */
         cur = cur[cur.length - 1];
         var id = cur && cur.length ? cur[0].id : "";
 
@@ -50,5 +58,12 @@ $(document).ready(function () {
             $navLinks.removeClass("current");
             $navLinks.filter("[href='#" + id + "']").addClass("current");
         }
+
+        /* Header shadow */
+        if ($(window).scrollTop() > 0) {
+            $header.css("box-shadow", "none");
+        } else {
+            $header.css("box-shadow", "0 0 1px rgba(0, 0, 0, 0.25)");
+        }
     });
-});
+}

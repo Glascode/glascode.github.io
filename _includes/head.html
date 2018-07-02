@@ -11,21 +11,21 @@
         {% endif %}
     </title>
 
-    <link rel="shortcut icon" href="/images/icons/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Playfair+Display:400,700|Fira+Mono"
+    <link rel="shortcut icon" href="/images/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700|Playfair+Display:400,700|Fira+Mono"
           rel="stylesheet">
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous">
     <link rel="stylesheet"
-          href="{{ '/styles/main.css' | prepend: site.baseurl }}">
+          href="{{ '/css/main.css' | prepend: site.baseurl }}">
     <link rel="stylesheet"
-          href="{{ '/styles/components.css' | prepend: site.baseurl }}">
+          href="{{ '/css/components.css' | prepend: site.baseurl }}">
     <link rel="stylesheet"
-          href="{{ '/styles/syntax.css' | prepend: site.baseurl }}">
+          href="{{ '/css/syntax.css' | prepend: site.baseurl }}">
     {% if page.style %}
-    {% capture stylelink %}/styles/{{ page.style }}.css{% endcapture %}
+    {% capture stylelink %}/css/{{ page.style }}.css{% endcapture %}
     <link rel="stylesheet"
           href="{{ stylelink | prepend: site.baseurl }}">
     {% endif %}
