@@ -167,6 +167,10 @@ a:hover {
         padding: 0 1em;
     }
 
+    .section:last-child {
+        margin-bottom: 0;
+    }
+
     .section-title {
         font-size: 3em;
     }

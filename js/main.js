@@ -99,13 +99,11 @@ function toggleMenu(headerHeight) {
 }
 
 function openMenu() {
-    $(".header").outerHeight("+=200");
-    $(".content").css("transform", "translateY(200px)");
+    $(".header").outerHeight("+=150");
     $("#hamburger-container").addClass("active");
 }
 
 function closeMenu(headerHeight) {
     $(".header").height(headerHeight);
-    $(".content").css("transform", "translateY(0)");
     $("#hamburger-container").removeClass("active");
 }
