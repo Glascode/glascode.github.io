@@ -68,6 +68,7 @@ a:hover {
     margin-bottom: 3em;
     background: var(--background-color);
     z-index: 1;
+    transition: box-shadow .3s;
 }
 
 .header a {
