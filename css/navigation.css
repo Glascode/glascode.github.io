@@ -1,4 +1,5 @@
 #hamburger-container {
+    display: none;
     position: absolute;
     top: 32px;
     right: 16px;
@@ -63,7 +64,11 @@
 }
 
 .nav-item {
-    padding: 0 2em;
+    padding-right: 4em;
+}
+
+.nav-item:last-child {
+    padding-right: 0;
 }
 
 .nav-link {
@@ -89,6 +94,10 @@
 }
 
 @media screen and (max-width: 800px) {
+    #hamburger-container {
+        display: block;
+    }
+
     .navigation {
         position: absolute;
         top: 100px;
