@@ -84,6 +84,10 @@ $(document).ready(function () {
     $(".content").on("click", function () {
         closeMenu($headerHeight);
     });
+
+    $(".nav-item").on("click", function () {
+        closeMenu($headerHeight);
+    });
 });
 
 function toggleMenu(headerHeight) {
