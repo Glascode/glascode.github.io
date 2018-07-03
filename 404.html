@@ -3,10 +3,27 @@ layout: default
 title: Page not found
 ---
 
-<link rel="stylesheet" href="{{ '/css/404.css' | prepend: site.baseurl }}">
+<style>
+    :root {
+        --background-color: var(--dark-color);
+    }
+
+    body {
+        color: white;
+        background: var(--background-color);
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 2em 5em;
+    }
+</style>
 
 <div style="text-align: center; margin: 3em auto">
-    <h2 style="font: 400 6em 'Playfair Display', serif; margin-bottom: 2rem">
+    <h2 style="font: 400 6em 'Source Serif Pro', serif; margin-bottom: 2rem">
         Oops!
     </h2>
     <p>The page you're looking for can't be found.</p>

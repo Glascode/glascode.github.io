@@ -4,8 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>
-        {% if page.title and page.id != "home" %}
-        {{ " | Glascode" | prepend: page.title }}
+        {% if page.title %}
+        {{ " · Maël Querré" | prepend: page.title }}
         {% else %}
         {{ site.title }}
         {% endif %}
