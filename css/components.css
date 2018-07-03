@@ -77,15 +77,15 @@ textarea { /* initial style */
     text-decoration: none;
 }
 
-.button.light {
+.button--light {
     color: var(--dark-color);
     background: var(--light-color);
-    border: 1px solid currentColor;
+    border: 1px solid var(--line-color);
+    transition: border-color .2s;
 }
 
-.button.light:hover {
-    color: var(--light-color);
-    background: var(--dark-color);
+.button--light:hover {
+    background: var(--light-color);
     border: 1px solid var(--dark-color);
 }
 

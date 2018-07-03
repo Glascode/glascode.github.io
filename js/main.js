@@ -4,11 +4,18 @@ function initPage() {
     var lastId;
     var $header = $(".header");
     var $headerHeight = $header.outerHeight() + 1;
+    var SPACE;
 
-    $(".content").css("margin-top", $headerHeight);
+    if ($(window).width() > 800) {
+        SPACE = 50;
+    } else {
+        SPACE = 10;
+    }
+
+    $(".content").css("margin-top", $headerHeight + SPACE);
 
     /* All list items */
-    var $navLinks = $(".nav--link");
+    var $navLinks = $(".nav-link");
 
     /* Anchors corresponding to menu items */
     var scrollItems = $navLinks.map(function () {
@@ -67,4 +74,34 @@ function initPage() {
 
 $(document).ready(function () {
     initPage();
+
+    const $headerHeight = $(".header").height();
+
+    $("#hamburger-container").on("click", function () {
+        toggleMenu($headerHeight);
+    });
+
+    $(".content").on("click", function () {
+        closeMenu($headerHeight);
+    });
 });
+
+function toggleMenu(headerHeight) {
+    if ($(".header").height() <= headerHeight) {
+        openMenu();
+    } else {
+        closeMenu(headerHeight);
+    }
+}
+
+function openMenu() {
+    $(".header").outerHeight("+=200");
+    $(".content").css("transform", "translateY(200px)");
+    $("#hamburger-container").addClass("active");
+}
+
+function closeMenu(headerHeight) {
+    $(".header").height(headerHeight);
+    $(".content").css("transform", "translateY(0)");
+    $("#hamburger-container").removeClass("active");
+}

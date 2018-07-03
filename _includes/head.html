@@ -2,6 +2,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+          content="Maël Querré, étudiant en informatique, développement web.">
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:image" content="/images/logo.png">
+    <meta property="og:title" content="Maël Querré · Développement web">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+          content="Maël Querré, étudiant en informatique, développement web.">
+    <meta property="og:url" content="https://glascode.github.io/">
+
 
     <title>
         {% if page.title %}
@@ -18,12 +29,11 @@
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
           crossorigin="anonymous">
-    <link rel="stylesheet"
-          href="{{ '/css/main.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet"
-          href="{{ '/css/components.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet"
-          href="{{ '/css/syntax.css' | prepend: site.baseurl }}">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navigation.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/syntax.css">
     {% if page.style %}
     {% capture stylelink %}/css/{{ page.style }}.css{% endcapture %}
     <link rel="stylesheet"
