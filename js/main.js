@@ -25,9 +25,8 @@ function initPage() {
         }
     });
 
-    // Bind click handler to menu items
-    // so we can get a fancy scroll animation
-    const SCROLL_SPEED = 300;
+    /* Bind click handler to menu items for a fancy scroll animation */
+    const SCROLL_SPEED = 400;
     $navLinks.click(function (e) {
         var href = $(this).attr("href");
         var offsetTop = href === "#" ? 0 : $(href).offset().top - $headerHeight + 1;
