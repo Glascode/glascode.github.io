@@ -1,23 +1,24 @@
 <header class="header">
-    <a class="site-title" href="{{ site.url }}">
-        <img class="site-logo" src="{{ site.baseurl }}/images/logo.svg">
-        <h1>Maël Querré</h1>
-    </a>
+    <div class="header-inner">
+        <a class="site-title" href="{{ site.url }}">
+            <img class="site-logo" src="{{ site.baseurl }}/images/logo.svg">
+            <!--<h1>Maël Querré</h1>-->
+        </a>
 
-    <div id="hamburger-container" class="button button--light">
-        <div id="hamburger"></div>
+        <div id="hamburger-container" class="button button--light">
+            <div id="hamburger"></div>
+        </div>
+
+        <nav class="navigation">
+            <ul class="nav-list">
+                {% for category in site.data.categories %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ category.url }}">
+                        {{ category.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
     </div>
-
-    <nav class="navigation">
-        <ul class="nav-list">
-            {% for category in site.data.categories %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{ category.url }}">
-                    {{ category.title }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </nav>
-
 </header>

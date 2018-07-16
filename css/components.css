@@ -16,10 +16,10 @@ textarea { /* initial style */
 
 .form-field {
     width: 100%;
-    padding: 16px;
+    padding: 16px 0;
     margin-bottom: 24px;
     color: currentColor;
-    border: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
     outline: none;
     transition: border-color .3s;
 }
@@ -28,7 +28,7 @@ textarea { /* initial style */
     opacity: 0;
     position: absolute;
     display: block;
-    margin-top: -1.8em;
+    margin-top: -1.5em;
     font-size: .8em;
     font-style: italic;
     color: var(--red);
@@ -55,30 +55,29 @@ textarea { /* initial style */
     resize: none;
 }
 
-.form-field, .button {
-    border-radius: 3px;
-}
-
 .button {
     display: block;
     width: fit-content;
+    padding: .8em 1.2em;
     font-size: 1rem;
-    padding: .5em 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
     color: white;
-    background: var(--dark-color);
-    border: 1px solid var(--dark-color);
+    background: var(--secondary-color);
+    border-radius: 2px;
     text-decoration: none;
+    text-transform: uppercase;
     cursor: pointer;
     transition: background-color .15s;
 }
 
 .button:hover {
-    background: #203041;
+    background-color: var(--secondary-color-dark);
     text-decoration: none;
 }
 
 .button--light {
-    color: var(--dark-color);
+    color: var(--secondary-color);
     background: var(--light-color);
     border: 1px solid var(--line-color);
     transition: border-color .2s;
@@ -86,13 +85,14 @@ textarea { /* initial style */
 
 .button--light:hover {
     background: var(--light-color);
-    border: 1px solid var(--dark-color);
+    border: 1px solid var(--secondary-color);
 }
 
 .button.transparent {
     color: var(--light-color);
     background: var(--background-color);
     border: 1px solid var(--light-color);
+    transition: color .2s, background-color .2s;
 }
 
 .button.transparent:hover {
@@ -100,7 +100,7 @@ textarea { /* initial style */
     background: var(--light-color);
 }
 
-.arrow-link {
+.line-link {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -110,12 +110,21 @@ textarea { /* initial style */
     text-decoration: none !important;
 }
 
-.arrow-link::after {
-    content: '\2192'; /* right arrow */
-    margin-left: .5em;
-    transition: transform .3s;
+.line-link::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin-right: .5em;
+    transition: width .2s;
 }
 
-.arrow-link:hover::after {
-    transform: translateX(.5em);
+.line-link:hover::before {
+    width: 30px;
+}
+
+.link-style-none {
+    color: inherit !important;
+    text-decoration: none !important;
 }
