@@ -7,9 +7,9 @@ function initPage() {
     var SPACE;
 
     if ($(window).width() > 800) {
-        SPACE = 50;
+        SPACE = 100;
     } else {
-        SPACE = 10;
+        SPACE = 50;
     }
 
     $(".content").css("margin-top", $headerHeight + SPACE);
