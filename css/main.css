@@ -292,6 +292,10 @@ a:hover {
     margin-right: 2em;
 }
 
+.footer-item img {
+    width: 18px;
+}
+
 .footer-item:last-child {
     margin-right: 0;
 }
