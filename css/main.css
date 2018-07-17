@@ -63,7 +63,6 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2em 1em;
     background: var(--background-color);
     z-index: 1;
     transition: box-shadow .3s;
@@ -73,6 +72,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 2em 1em;
 }
 
 .header a {
@@ -159,11 +159,8 @@ a:hover {
 
     .content {
         margin-top: 0;
+        padding: 0 20px;
         transition: transform .2s;
-    }
-
-    .section {
-        padding: 0 1em;
     }
 
     .section:last-child {
@@ -182,7 +179,7 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    border: 1px solid var(--line-color);
+    background-color: #eee;
     border-radius: 2px;
 }
 
@@ -190,10 +187,7 @@ a:hover {
     width: 30%;
     flex-shrink: 0;
     padding: 2em;
-}
-
-.project-info:hover .project-title {
-    text-decoration: underline;
+    text-align: center;
 }
 
 .project-illustration {
@@ -203,8 +197,19 @@ a:hover {
 }
 
 @media screen and (max-width: 800px) {
+    .project {
+        flex-direction: column;
+    }
+
     .project-info {
-        font-size: 1rem;
+        width: 100%;
+        order: 2;
+    }
+
+    .project-illustration {
+        width: 100%;
+        border-top-left-radius: 2px;
+        border-bottom-right-radius: 0;
     }
 }
 
@@ -219,15 +224,11 @@ a:hover {
     color: var(--mid-color);
 }
 
+/* Contact form */
+
 .contact-form {
     width: 500px;
     margin: auto;
-}
-
-@media screen and (max-width: 800px) {
-    .contact-form {
-        width: auto;
-    }
 }
 
 .form-title {
@@ -238,6 +239,16 @@ a:hover {
 
 .contact-form .button {
     margin-left: auto;
+}
+
+@media screen and (max-width: 800px) {
+    .contact-form {
+        width: auto;
+    }
+
+    .contact-form .button {
+        margin: auto;
+    }
 }
 
 /* Footer */
@@ -254,7 +265,7 @@ a:hover {
 }
 
 .footer-list:last-child {
-    margin-top: 2em;
+    margin-top: 3em;
     text-transform: uppercase;
 }
 
