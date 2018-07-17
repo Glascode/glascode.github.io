@@ -1,10 +1,6 @@
-- title: Projets
+- title: Work
   url: "#work"
   id: work
-
-- title: À propos
-  url: "#about"
-  id: about
 
 - title: Contact
   url: "#contact"

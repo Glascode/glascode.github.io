@@ -141,14 +141,20 @@ a:hover {
 }
 
 .section {
-    margin-bottom: 100px;
+    padding-top: 50px;
+    margin-bottom: 50px;
 }
 
 .section-title {
+    margin-bottom: 2em;
     font-family: Muli, sans-serif;
     font-weight: 700;
-    font-size: 3em;
-    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
 }
 
 @media screen and (max-width: 800px) {
@@ -266,7 +272,7 @@ a:hover {
 
 .footer-list:last-child {
     margin-top: 3em;
-    text-transform: uppercase;
+    text-transform: lowercase;
 }
 
 .footer-list a {

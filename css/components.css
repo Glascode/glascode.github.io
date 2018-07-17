@@ -61,15 +61,13 @@ textarea { /* initial style */
     width: fit-content;
     padding: .8em 1.2em;
     font-size: 1em;
-    font-weight: 700;
     letter-spacing: 1px;
     color: white;
     background: var(--secondary-color);
-    border-radius: 2px;
     text-decoration: none;
     text-transform: uppercase;
     cursor: pointer;
-    transition: background-color .15s;
+    transition: background-color .2s;
 }
 
 .button:hover {
@@ -77,16 +75,17 @@ textarea { /* initial style */
     text-decoration: none;
 }
 
-.button--light {
-    color: var(--secondary-color);
-    background: var(--light-color);
-    border: 1px solid var(--line-color);
-    transition: border-color .2s;
+.button.light {
+    color: var(--secondary-color-dark);
+    background-color: var(--light-color);
+    border: 1px solid var(--secondary-color-dark);
+    transition: color .2s, background-color .2s;
 }
 
-.button--light:hover {
-    background: var(--light-color);
-    border: 1px solid var(--secondary-color);
+.button.light:hover {
+    color: white;
+    background-color: var(--secondary-color-dark);
+    border: 1px solid var(--secondary-color-dark);
 }
 
 .button.transparent {
