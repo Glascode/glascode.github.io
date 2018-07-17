@@ -174,7 +174,7 @@ a:hover {
     }
 
     .section-title {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -196,6 +196,17 @@ a:hover {
     text-align: center;
 }
 
+.project-title {
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.project-subtitle {
+    margin: 1em 0;
+    font-weight: 400;
+    color: var(--mid-color);
+}
+
 .project-illustration {
     width: 70%;
     border-top-right-radius: 2px;
@@ -212,22 +223,15 @@ a:hover {
         order: 2;
     }
 
+    .project-title {
+        font-size: 1.3em;
+    }
+
     .project-illustration {
         width: 100%;
         border-top-left-radius: 2px;
         border-bottom-right-radius: 0;
     }
-}
-
-.project-title {
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.project-subtitle {
-    margin: 1em 0;
-    font-weight: 400;
-    color: var(--mid-color);
 }
 
 /* Contact form */
