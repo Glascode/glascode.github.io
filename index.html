@@ -26,32 +26,5 @@ title: Home
 <section id="contact" class="section">
     <h2 class="section-title">Contact</h2>
 
-    <form action="/contact-me.php" class="contact-form" method="POST">
-        <h2 class="form-title">
-            Me contacter
-        </h2>
-        <input type="hidden" name="subject"
-               value="Contact via formulaire - thomasferey.fr">
-        <input type="hidden" name="access" value="stopspam">
-
-        <label for="name">
-            <input class="form-field input" type="text" name="name" id="name"
-                   placeholder="Votre nom" required>
-        </label>
-        <label for="email">
-            <input class="form-field input" type="email" name="email" id="email"
-                   placeholder="Votre email" required
-                   pattern="^[a-z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$">
-            <span class="requirement">
-                Veuillez fournir une adresse email valide
-            </span>
-        </label>
-        <label for="message">
-            <textarea class="form-field textarea" name="message" cols="60"
-                      rows="10" wrap="hard" id="message"
-                      placeholder="Votre message" required></textarea>
-        </label><br>
-
-        <input class="button" type="submit" name="submit" value="Envoyer">
-    </form>
+    <a style="display: block; margin: auto; width: fit-content; font-size: 3em" href="mailto:mael.querre@gmail.com">mael.querre@gmail.com</a>
 </section>
