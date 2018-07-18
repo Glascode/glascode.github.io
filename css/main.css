@@ -50,12 +50,15 @@ ul {
     padding: 0;
 }
 
-a, a:visited {
-    color: var(--secondary-color-dark);
+a {
     text-decoration: none;
 }
 
-a:hover {
+p a {
+    color: var(--secondary-color-dark);
+}
+
+p a:hover {
     text-decoration: underline;
 }
 
@@ -247,7 +250,7 @@ a:hover {
     font-weight: 600;
 }
 
-.contact-form .button {
+.contact-form .btn {
     margin-left: auto;
 }
 
@@ -256,7 +259,7 @@ a:hover {
         width: auto;
     }
 
-    .contact-form .button {
+    .contact-form .btn {
         margin: auto;
     }
 }

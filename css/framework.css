@@ -1,0 +1,158 @@
+/** Components **/
+
+/* Buttons */
+
+.btn {
+    display: block;
+    width: fit-content;
+    padding: .8em 1.2em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: color .2s, background-color .2s, border-color .2s;
+}
+
+.btn-primary {
+    color: white;
+    background: #42b983;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color-dark);
+    text-decoration: none;
+}
+
+.btn-outline-primary {
+    color: #478d69;
+    background-color: transparent;
+    border-color: #478d69;
+}
+
+.btn-outline-primary:hover {
+    color: white;
+    background-color: var(--secondary-color-dark);
+    border: 1px solid var(--secondary-color-dark);
+}
+
+.btn-outline-light {
+    color: white;
+    background-color: transparent;
+    border-color: white;
+}
+
+.btn-outline-light:hover {
+    color: #222222;
+    background-color: white;
+}
+
+/* Forms */
+
+input,
+button,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.contact-form label {
+    position: relative;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    margin-bottom: 24px;
+    color: currentColor;
+    border-bottom: 1px solid var(--line-color);
+    outline: none;
+    transition: border-color .3s;
+}
+
+.form-text {
+    opacity: 0;
+    position: absolute;
+    display: block;
+    margin-top: -1.5em;
+    font-size: .8em;
+    font-style: italic;
+    color: var(--red);
+    transition: opacity .3s;
+}
+
+.form-control:focus {
+    border-color: var(--dark-color);
+}
+
+.form-control:valid {
+    border-color: var(--green);
+}
+
+.form-control:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: var(--red);
+}
+
+.form-control:invalid:not(:focus):not(:placeholder-shown) ~ .form-text {
+    opacity: 1;
+}
+
+.textarea {
+    resize: none;
+}
+
+.line-link {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    background: none;
+    border: none;
+    text-decoration: none !important;
+}
+
+.line-link::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin-right: .5em;
+    transition: width .2s;
+}
+
+.line-link:hover::before {
+    width: 30px;
+}
+
+.link-style-none {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/** Utilities **/
+
+/* Spacing */
+
+.m-auto {
+    margin: auto;
+}
+
+.mb-4 {
+    margin-bottom: 4em !important;
+}
+
+/* Text */
+
+.text-center {
+    text-align: center;
+}
