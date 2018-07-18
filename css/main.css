@@ -279,7 +279,6 @@ p a:hover {
 
 .footer-list:last-child {
     margin-top: 3em;
-    text-transform: lowercase;
 }
 
 .footer-list a {
