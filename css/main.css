@@ -188,8 +188,12 @@ p a:hover {
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    background-color: #eee;
-    border-radius: 2px;
+    background-color: #eeeeee;
+    transition: background-color .2s;
+}
+
+.project:hover {
+    background-color: #dddddd;
 }
 
 .project-info {
@@ -212,8 +216,6 @@ p a:hover {
 
 .project-illustration {
     width: 70%;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
 }
 
 @media screen and (max-width: 800px) {
@@ -232,8 +234,6 @@ p a:hover {
 
     .project-illustration {
         width: 100%;
-        border-top-left-radius: 2px;
-        border-bottom-right-radius: 0;
     }
 }
 
