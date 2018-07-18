@@ -151,10 +151,12 @@
         background-color: black;
         opacity: 0;
         transition: opacity .5s;
+        z-index: -1;
     }
 
     .active .content::after,
     .active .footer::after {
         opacity: .5;
+        z-index: 1;
     }
 }

@@ -67,7 +67,7 @@ p a:hover {
     top: 0;
     width: 100%;
     background: var(--background-color);
-    z-index: 1;
+    z-index: 2;
     transition: box-shadow .3s;
 }
 
