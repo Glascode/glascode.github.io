@@ -5,11 +5,10 @@
 .btn {
     display: block;
     width: fit-content;
-    padding: .8em 1.2em;
+    padding: .5em 1.3em;
     font-size: 1em;
-    letter-spacing: 1px;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: lowercase;
     border: 1px solid transparent;
     cursor: pointer;
     transition: color .2s, background-color .2s, border-color .2s;
@@ -21,8 +20,7 @@
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-color-dark);
-    text-decoration: none;
+    background-color: #478d69;
 }
 
 .btn-outline-primary {
@@ -33,8 +31,7 @@
 
 .btn-outline-primary:hover {
     color: white;
-    background-color: var(--secondary-color-dark);
-    border: 1px solid var(--secondary-color-dark);
+    background-color: #478d69;
 }
 
 .btn-outline-light {
@@ -86,20 +83,19 @@ textarea {
     margin-top: -1.5em;
     font-size: .8em;
     font-style: italic;
-    color: var(--red);
     transition: opacity .3s;
 }
 
 .form-control:focus {
-    border-color: var(--dark-color);
+    border-color: #222222;
 }
 
 .form-control:valid {
-    border-color: var(--green);
+    border-color: #22863a;
 }
 
 .form-control:invalid:not(:focus):not(:placeholder-shown) {
-    border-color: var(--red);
+    border-color: #d73a49;
 }
 
 .form-control:invalid:not(:focus):not(:placeholder-shown) ~ .form-text {
@@ -140,6 +136,16 @@ textarea {
 }
 
 /** Utilities **/
+
+/* Colours */
+
+.text-success {
+    color: #22863a;
+}
+
+.text-danger {
+    color: #d73a49;
+}
 
 /* Spacing */
 
