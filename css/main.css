@@ -87,16 +87,8 @@ p a:hover {
 }
 
 .site-title h1 {
-    display: inline-block;
-    vertical-align: middle;
     font-weight: 700;
     text-transform: lowercase;
-}
-
-.site-logo {
-    width: 2em;
-    margin-right: .5em;
-    vertical-align: middle;
 }
 
 @media screen and (max-width: 800px) {
@@ -106,10 +98,10 @@ p a:hover {
         justify-content: flex-start;
         transition: box-shadow .3s;
     }
+}
 
-    .site-logo {
-        margin-right: 0;
-    }
+.content {
+    padding: 0 20px;
 }
 
 .header-inner,
@@ -163,7 +155,6 @@ p a:hover {
 
     .content {
         margin-top: 0;
-        padding: 0 20px;
         transition: transform .2s;
     }
 
