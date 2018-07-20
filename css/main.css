@@ -1,5 +1,4 @@
 :root {
-    --dark-color: #222222;
     --light-color: white;
     --mid-color: grey;
     --line-color: #dddddd;
@@ -28,7 +27,7 @@ body {
     font-family: Muli, sans-serif;
     font-size: 14px;
     -webkit-font-smoothing: antialiased;
-    color: var(--dark-color);
+    color: #222;
 }
 
 main {
