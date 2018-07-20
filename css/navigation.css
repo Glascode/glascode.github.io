@@ -105,7 +105,7 @@
 
     .navigation {
         position: fixed;
-        top: 81px; /* header height */
+        top: 79px; /* header height */
         right: 0;
         height: 100%;
         background-color: white;
