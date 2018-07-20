@@ -180,6 +180,7 @@ p a:hover {
     margin-bottom: 4em;
     overflow: hidden;
     background-color: #eeeeee;
+    border-radius: 2px;
     transition: background-color .2s;
 }
 
@@ -302,6 +303,48 @@ p a:hover {
     width: 300px;
     margin: auto;
     z-index: -1;
+}
+
+.footer-link {
+    position: relative;
+}
+
+.footer-link::before,
+.footer-link::after {
+    opacity: 0;
+    transition: opacity .1s;
+}
+
+.footer-link:hover::before,
+.footer-link:hover::after {
+    opacity: 1;
+}
+
+.footer-link::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    width: 50px;
+    margin-left: -25px;
+    padding: .4em;
+    font-size: .9em;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 2px;
+}
+
+.footer-link::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, .8) transparent transparent transparent;
+    z-index: 99;
 }
 
 @media screen and (max-width: 800px) {
