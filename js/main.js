@@ -1,8 +1,8 @@
-function initPage() {
+function addScrollListeners() {
 
     /* Cache selectors */
     var lastId;
-    var $header = $(".header");
+    var $header = $('.header');
     var $headerHeight = $header.outerHeight() + 1;
     var SPACE;
 
@@ -12,16 +12,17 @@ function initPage() {
         SPACE = 50;
     }
 
-    $content =  $(".content");
-    $content.css("margin-top", $headerHeight);
-    $content.css("padding-top", SPACE);
+    /* Placing content */
+    $content = $('.content');
+    $content.css('margin-top', $headerHeight);
+    $content.css('padding-top', SPACE);
 
     /* All list items */
-    var $navLinks = $(".nav-link");
+    var $navLinks = $('.nav-link');
 
     /* Anchors corresponding to menu items */
     var scrollItems = $navLinks.map(function () {
-        var $item = $($(this).attr("href"));
+        var $item = $($(this).attr('href'));
         if ($item.length) {
             return $item;
         }
@@ -30,9 +31,9 @@ function initPage() {
     /* Bind click handler to menu items for a fancy scroll animation */
     const SCROLL_SPEED = 400;
     $navLinks.click(function (e) {
-        var href = $(this).attr("href");
-        var offsetTop = href === "#" ? 0 : $(href).offset().top - $headerHeight + 1;
-        $("html, body").stop().animate({
+        var $href = $(this).attr('href');
+        var offsetTop = $href === '#' ? 0 : $($href).offset().top - $headerHeight + 1;
+        $('html, body').stop().animate({
             scrollTop: offsetTop
         }, SCROLL_SPEED);
         e.preventDefault();
@@ -42,63 +43,76 @@ function initPage() {
     $(window).scroll(function () {
 
         /* Get container scroll position */
-        var $windowTop = $(this).scrollTop() + $headerHeight;
+        var windowTop = $(this).scrollTop() + $headerHeight;
 
         /* Get id of current scroll item */
         var cur = scrollItems.map(function () {
-            if ($(this).offset().top < $windowTop) {
+            if ($(this).offset().top < windowTop) {
                 return this;
             }
         });
 
         /* Get the id of the current element */
         cur = cur[cur.length - 1];
-        var id = cur && cur.length ? cur[0].id : "";
+        var id = cur && cur.length ? cur[0].id : '';
 
         if (lastId !== id) {
             lastId = id;
 
             /* Set or remove active class */
-            $navLinks.removeClass("current");
-            $navLinks.filter("[href='#" + id + "']").addClass("current");
+            $navLinks.removeClass('current');
+            $navLinks.filter("[href='#" + id + "']").addClass('current');
         }
 
         /* Header shadow */
         if ($(window).width() > 800) {
             if ($(window).scrollTop() > 0) {
-                $header.css("box-shadow", "0 0 1px rgba(0, 0, 0, 0.25)");
+                $header.css('box-shadow', '0 0 1px rgba(0, 0, 0, 0.25)');
             } else {
-                $header.css("box-shadow", "none");
+                $header.css('box-shadow', 'none');
             }
         }
     });
 
 }
 
-$(document).ready(function () {
-    initPage();
+function openMenu() {
+    $('body').addClass('active');
+}
 
-    $("#hamburger-container").on("click", function () {
-        toggleMenu();
-    });
-
-    $(".nav-item, .content").on("click", function () {
-        closeMenu();
-    });
-});
+function closeMenu() {
+    $('body').removeClass('active');
+}
 
 function toggleMenu() {
-    if ($("body").hasClass("active")) {
+    if ($('body').hasClass('active')) {
         closeMenu();
     } else {
         openMenu();
     }
 }
 
-function openMenu() {
-    $("body").addClass("active");
+function addMobileMenuListeners() {
+    $('#hamburger-container').on('click', function () {
+        toggleMenu();
+    });
+
+    $('.nav-item, .content').on('click', function () {
+        closeMenu();
+    });
 }
 
-function closeMenu() {
-    $("body").removeClass("active");
+function loadImages() {
+    [].forEach.call(document.querySelectorAll('img[data-src]'), function (img) {
+        img.setAttribute('src', img.getAttribute('data-src'));
+        img.onload = function () {
+            img.removeAttribute('data-src');
+        };
+    });
 }
+
+$(document).ready(function () {
+    loadImages();
+    addScrollListeners();
+    addMobileMenuListeners();
+});

@@ -62,6 +62,15 @@ p a:hover {
     text-decoration: underline;
 }
 
+img {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+img[data-src] {
+    opacity: 0;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -227,6 +236,12 @@ p a:hover {
     .project-illustration {
         width: 100%;
     }
+}
+
+.plant-separator {
+    display: block;
+    width: 100px;
+    margin: auto;
 }
 
 /* Contact form */
