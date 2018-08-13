@@ -72,6 +72,7 @@ img[data-src] {
 
 .header {
     width: 100%;
+    background-color: #fff;
     z-index: 2;
 }
 
@@ -356,7 +357,7 @@ img[data-src] {
     border-width: 5px;
     border-style: solid;
     border-color: rgba(0, 0, 0, .8) transparent transparent transparent;
-    z-index: 99;
+    z-index: 2;
 }
 
 @media screen and (max-width: 800px) {
