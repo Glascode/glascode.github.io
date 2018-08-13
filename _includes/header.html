@@ -1,23 +1,11 @@
 <header class="header">
     <div class="header-inner">
-        <a class="site-title" href="{{ site.url }}">
-            <h1>Maël Querré</h1>
+        <a href="{{ site.url }}">
+            <h1 class="site-title">Maël Querré</h1>
         </a>
 
         <div id="hamburger-container">
             <div id="hamburger"></div>
         </div>
-
-        <nav class="navigation">
-            <ul class="nav-list">
-                {% for category in site.data.categories %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ category.url }}">
-                        {{ category.title }}
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
-        </nav>
     </div>
 </header>

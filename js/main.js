@@ -3,19 +3,10 @@ function addScrollListeners() {
     /* Cache selectors */
     var lastId;
     var $header = $('.header');
-    var $headerHeight = $header.outerHeight() + 1;
-    var SPACE;
-
-    if ($(window).width() > 800) {
-        SPACE = 100;
-    } else {
-        SPACE = 50;
-    }
+    var HEADER_HEIGHT = $header.outerHeight() + 1;
 
     /* Placing content */
     $content = $('.content');
-    $content.css('margin-top', $headerHeight);
-    $content.css('padding-top', SPACE);
 
     /* All list items */
     var $navLinks = $('.nav-link');
@@ -32,7 +23,7 @@ function addScrollListeners() {
     const SCROLL_SPEED = 400;
     $navLinks.click(function (e) {
         var $href = $(this).attr('href');
-        var offsetTop = $href === '#' ? 0 : $($href).offset().top - $headerHeight + 1;
+        var offsetTop = $href === '#' ? 0 : $($href).offset().top - HEADER_HEIGHT + 1;
         $('html, body').stop().animate({
             scrollTop: offsetTop
         }, SCROLL_SPEED);
@@ -43,7 +34,7 @@ function addScrollListeners() {
     $(window).scroll(function () {
 
         /* Get container scroll position */
-        var windowTop = $(this).scrollTop() + $headerHeight;
+        var windowTop = $(this).scrollTop() + HEADER_HEIGHT;
 
         /* Get id of current scroll item */
         var cur = scrollItems.map(function () {
@@ -64,12 +55,13 @@ function addScrollListeners() {
             $navLinks.filter("[href='#" + id + "']").addClass('current');
         }
 
-        /* Header shadow */
+        /* Navigation shadow */
+        $navigation = $(".navigation");
         if ($(window).width() > 800) {
-            if ($(window).scrollTop() > 0) {
-                $header.css('box-shadow', '0 0 1px rgba(0, 0, 0, 0.25)');
+            if ($navigation.offset().top > HEADER_HEIGHT) {
+                $navigation.addClass('shadow');
             } else {
-                $header.css('box-shadow', 'none');
+                $navigation.removeClass('shadow');
             }
         }
     });

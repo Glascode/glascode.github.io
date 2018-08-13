@@ -10,7 +10,6 @@
     text-decoration: none;
     text-transform: lowercase;
     border: 1px solid transparent;
-    border-radius: 2px;
     cursor: pointer;
     transition: color .2s, background-color .2s, border-color .2s;
 }
