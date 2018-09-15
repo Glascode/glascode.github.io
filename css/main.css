@@ -20,6 +20,7 @@ html, body {
 }
 
 html {
+    font-size: 14px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -31,8 +32,8 @@ body {
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Roboto, Arial, sans-serif;
-    font-size: 14px;
-    color: #222;
+    color: #fff;
+    background-color: #000;
 }
 
 main {
@@ -77,12 +78,11 @@ img[data-src] {
 
 .header {
     width: 100%;
-    background-color: #fff;
     z-index: 2;
 }
 
 .header-inner {
-    padding: 4em 0;
+    padding: 4em 0 2em;
 }
 
 .header a {
@@ -95,10 +95,8 @@ img[data-src] {
 
 .site-title {
     text-align: center;
-    font-family: Roboto, sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .5em;
+    font-size: 96px;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 800px) {
@@ -121,24 +119,6 @@ img[data-src] {
 
 .content {
     padding: 0 20px;
-}
-
-.header-inner,
-.content,
-.footer-inner {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: width .2s;
-}
-
-@media screen and (max-width: 1000px) {
-    .header-inner,
-    .content,
-    .footer-inner {
-        width: auto;
-        max-width: 800px;
-    }
 }
 
 .content p,
@@ -166,6 +146,10 @@ img[data-src] {
     text-align: center;
 }
 
+.hero-paragraph {
+    font-size: 2em;
+}
+
 @media screen and (max-width: 800px) {
     .content,
     .footer-inner {
@@ -189,12 +173,12 @@ img[data-src] {
 /* Projects */
 
 .project {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 4em;
     overflow: hidden;
-    background-color: #eeeeee;
     transition: background-color .2s;
 }
 
@@ -221,7 +205,11 @@ img[data-src] {
 }
 
 .project-illustration {
-    width: 70%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 @media screen and (max-width: 800px) {

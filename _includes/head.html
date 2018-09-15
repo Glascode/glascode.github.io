@@ -19,8 +19,6 @@
     <title>Maël Querré</title>
 
     <link rel="shortcut icon" href="/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700|Libre+Baskerville:400,700"
-          rel="stylesheet">
 
     <link rel="stylesheet"
           href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
@@ -28,12 +26,6 @@
           crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/navigation.css">
     <link rel="stylesheet" href="/css/framework.css">
     <link rel="stylesheet" href="/css/syntax.css">
-    {% if page.style %}
-    {% capture stylelink %}/css/{{ page.style }}.css{% endcapture %}
-    <link rel="stylesheet"
-          href="{{ stylelink | prepend: site.baseurl }}">
-    {% endif %}
 </head>
