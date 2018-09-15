@@ -19,14 +19,19 @@ html, body {
     height: 100%; /* useful for sticky footer */
 }
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 body {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
-    font-family: "Libre Baskerville", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Roboto, Arial, sans-serif;
     font-size: 14px;
-    -webkit-font-smoothing: antialiased;
     color: #222;
 }
 
@@ -90,7 +95,7 @@ img[data-src] {
 
 .site-title {
     text-align: center;
-    font-family: "Raleway", sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .5em;
