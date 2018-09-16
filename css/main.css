@@ -9,17 +9,6 @@
     }
 }
 
-:root {
-    --light-color: white;
-    --mid-color: grey;
-    --line-color: #dddddd;
-    --secondary-color: #42b983;
-    --secondary-color-dark: #478d69;
-    --background-color: var(--light-color);
-    --green: #22863a;
-    --red: #d73a49;
-}
-
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -31,7 +20,7 @@ html, body {
 }
 
 html {
-    font-size: 14px;
+    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -43,6 +32,7 @@ body {
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Roboto, Arial, sans-serif;
+    line-height: 1.2;
     color: #fff;
     background-color: #000;
 }
@@ -67,29 +57,12 @@ ul {
 }
 
 a {
+    color: #0070c9;
     text-decoration: none;
-}
-
-p a {
-    color: var(--secondary-color-dark);
 }
 
 p a:hover {
     text-decoration: underline;
-}
-
-img {
-    opacity: 1;
-    transition: opacity 0.2s;
-}
-
-img[data-src] {
-    opacity: 0;
-}
-
-.content p,
-.content a {
-    line-height: 2em;
 }
 
 .content p {
@@ -105,11 +78,12 @@ img[data-src] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .hero-title {
     margin-bottom: 3rem;
-    font-size: 96px;
+    font-size: 6em;
     font-weight: 600;
     opacity: 0;
     animation: appear 1s forwards;
@@ -122,6 +96,32 @@ img[data-src] {
     animation-delay: .5s;
 }
 
+.arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 3em;
+    margin-left: -1.5em;
+    width: 3em;
+    opacity: 0;
+    animation: appear 1s forwards;
+    animation-delay: 1s;
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        width: 85%;
+        margin: auto;
+    }
+
+    .hero-title {
+        font-size: 3em;
+    }
+
+    .hero-description {
+        font-size: 1.5em;
+    }
+}
+
 /* Projects */
 
 .project {
@@ -130,6 +130,7 @@ img[data-src] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin: 0 2% 4em;
     height: 500px;
 }
@@ -173,14 +174,28 @@ img[data-src] {
     background-size: cover;
 }
 
+@media screen and (max-width: 800px) {
+    .project {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project-title {
+        font-size: 3em;
+    }
+
+    .project-subtitle {
+        font-size: 1.5em;
+    }
+}
+
 /* Footer */
 
 .footer {
     flex-shrink: 0;
     position: relative;
     font-size: .9em;
-    color: #ccc;
-    background-color: #222;
+    background-color: #111;
 }
 
 .footer-inner {
@@ -191,29 +206,71 @@ img[data-src] {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-list:last-child {
-    margin-top: 3em;
-}
-
-.footer-list a {
-    color: currentColor;
-    text-decoration: underline;
-}
-
-.footer-list a:hover {
-    color: #555555;
+    margin-top: 5em;
 }
 
 .footer-item {
-    margin-right: 2em;
-}
-
-.footer-item img {
-    width: 18px;
+    margin-right: 4em;
+    margin-bottom: 3em;
 }
 
 .footer-item:last-child {
     margin-right: 0;
+}
+
+.footer-list:first-child .footer-item:first-child {
+    margin-left: 4rem; /* Compensate for centering */
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: currentColor;
+}
+
+.footer-logo {
+    height: 3em;
+    margin-bottom: 2em;
+    transition: opacity .3s;
+}
+
+.footer-link:hover .footer-logo {
+    opacity: .5;
+}
+
+.footer-logo-text {
+    opacity: .5;
+}
+
+.footer-link:hover .footer-logo-text {
+    text-decoration: underline;
+}
+
+/* Landscape smartphones and below */
+@media screen and (max-width: 480px) {
+    .footer-inner {
+        padding: 3em 0;
+    }
+
+    .footer-list {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        margin: 0 0 3em !important;
+    }
+
+    .footer-logo {
+        margin-bottom: 1em;
+    }
+
+    .footer-list:last-child {
+        margin-top: 3em;
+    }
 }
