@@ -1,48 +1,67 @@
 /** Components **/
 
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 { /* Reboot */
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
 /* Buttons */
 
 .btn {
     display: block;
     width: fit-content;
-    padding: .5em 1.3em;
+    margin-top: 1.5em;
+    padding: .25em 1em;
     font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
     text-decoration: none;
-    text-transform: lowercase;
     border: 1px solid transparent;
+    border-radius: 4px;
     cursor: pointer;
-    transition: color .2s, background-color .2s, border-color .2s;
+    transition: color .3s, background-color .3s, border-color .2s;
 }
 
 .btn-primary {
-    color: white;
-    background: #42b983;
+    color: #fff;
+    background-color: #000;
 }
 
 .btn-primary:hover {
-    background-color: #478d69;
+    background-color: #333;
 }
 
 .btn-outline-primary {
-    color: #478d69;
+    color: #000;
     background-color: transparent;
-    border-color: #478d69;
+    border-color: #000;
 }
 
 .btn-outline-primary:hover {
-    color: white;
-    background-color: #478d69;
+    color: #fff;
+    background-color: #000;
 }
 
 .btn-outline-light {
-    color: white;
+    color: #fff;
     background-color: transparent;
-    border-color: white;
+    border-color: #fff;
 }
 
 .btn-outline-light:hover {
-    color: #222222;
-    background-color: white;
+    color: #000;
+    background-color: #fff;
 }
 
 /* Forms */
