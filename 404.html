@@ -13,12 +13,34 @@ title: Page not found
         color: #000;
         background-color: #fff;
     }
+
+    .oops {
+        font-size: 6em;
+        font-weight: 600;
+    }
+
+    .not-found {
+        margin: 2rem 0 4rem;
+        width: 40%;
+        font-size: 2em;
+        text-align: center
+    }
+
+    @media screen and (max-width: 800px) {
+        .oops {
+            font-size: 5em;
+        }
+
+        .not-found {
+            width: 80%;
+        }
+    }
 </style>
 
-<h1 style="font-size: 6em; font-weight: 600;">
+<h1 class="oops">
     Oups !
 </h1>
-<h2 style="margin: 2rem 0 4rem; width: 40%; font-size: 2em; text-align: center">
+<h2 class="not-found">
     La page que vous demandez est introuvable.
 </h2>
 
