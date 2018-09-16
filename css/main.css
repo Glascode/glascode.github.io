@@ -111,7 +111,8 @@ p a:hover {
     .hero {
         width: 85%;
         margin: auto;
-        min-height: 100vh;
+        height: 90vh;
+        min-height: 90vh;
     }
 
     .hero-title {
