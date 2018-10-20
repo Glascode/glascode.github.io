@@ -74,50 +74,23 @@ p a:hover {
 /* Hero */
 
 .hero {
-    height: 100vh;
-    min-height: 700px;
+    min-height: 100vh;
 }
 
-.hero-inner {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    background-color: #f4f4f4;
+.header {
+    margin-bottom: 5em;
 }
 
-.hero-title {
-    margin-bottom: 3rem;
-    font-size: 6em;
-    font-weight: 500;
-    opacity: 0;
-    animation: appear 1s forwards;
-}
-
-.hero-description {
-    margin: 1em 0;
-    font-size: 2em;
+.site-title {
     font-weight: 400;
-    opacity: 0;
-    animation: appear 1s .5s forwards;
 }
 
-.arrow-down {
-    position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    margin-left: -1.5rem;
-    font-size: 3em;
-    opacity: 0;
-    animation: appear 1s 1s forwards, down 5s 2s infinite;
+.site-title span {
+    font-weight: 600;
 }
 
 .section {
-    padding: 50px;
+    padding: 100px 200px;
 }
 
 @media screen and (max-width: 800px) {
@@ -126,76 +99,65 @@ p a:hover {
         min-height: 90vh;
     }
 
-    .hero-title {
-        font-size: 3em;
-    }
-
-    .hero-description {
-        font-size: 1.5em;
-    }
-
     .section {
-        padding: 0;
+        padding: 50px;
     }
 }
 
 /* Projects */
 
 .project {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     margin-bottom: 50px;
-    height: 500px;
-    color: #fff;
     text-decoration: none;
 }
 
-.project::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0;
-    transition: opacity .3s;
-    z-index: 0;
-}
-
 .project-title {
-    font-size: 4em;
-    font-weight: 500;
-    z-index: 1; /* Overlay the black layer on hover */
+    margin: 1em 0 2rem;
+    font-family: "Roboto", "Inter UI", sans-serif;
+    font-size: 3.5em;
+    font-weight: 100;
 }
 
 .project-subtitle {
-    margin: 1em 0;
-    font-size: 2em;
+    margin-bottom: 1em;
+    font-size: 1em;
     font-weight: 400;
-    z-index: 1; /* Overlay the black layer on hover */
 }
 
-.project:hover .project-title {
-    text-decoration: underline;
+.project-link {
 }
 
-.project:hover::after {
-    opacity: .3;
+.project-link::after {
+    content: '';
+    display: inline-block;
+    margin-left: 1rem;
+    width: 6px;
+    height: 6px;
+    vertical-align: middle;
+    border-top: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    transform: rotate(45deg);
+    transition: transform .4s;
 }
 
-#project--thomasferey {
-    background: url("/images/thomasferey.jpg") center no-repeat;
+.project-link:hover::after {
+    transform: translateX(.5em) rotate(45deg);
+}
+
+.project-illustration {
+    width: 100%;
+    height: 400px;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#project--melinequerre {
-    background: url("/images/melinequerre.jpg") center no-repeat;
-    background-size: cover;
+#project--thomasferey .project-illustration {
+    background-image: url("/images/thomasferey.jpg");
+}
+
+#project--melinequerre .project-illustration {
+    background-image: url("/images/melinequerre.jpg");
 }
 
 @media screen and (max-width: 800px) {
