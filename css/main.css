@@ -224,64 +224,55 @@ p a:hover {
 
 .footer {
     flex-shrink: 0;
-    position: relative;
-    font-size: .9em;
-    color: #fff;
-    background-color: #222;
-}
-
-.footer-inner {
-    padding: 5em 0;
-}
-
-.footer-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.footer-list:last-child {
-    margin-top: 5em;
-}
-
-.footer-item {
-    margin-right: 5em;
-    margin-bottom: 3em;
-}
-
-.footer-item:last-child {
-    margin-right: 0;
-}
-
-.footer-list:first-child .footer-item:first-child {
-    margin-left: 4rem; /* Compensate for centering */
-}
-
-.footer-link {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5em 0;
+    font-size: .9em;
+    color: #fff;
+    background-color: #000;
+}
+
+.footer-contents {
+    display: flex;
     justify-content: center;
-    color: currentColor;
+    margin: auto;
+    width: 50%;
 }
 
-.footer-logo {
-    height: 3em;
-    margin-bottom: 2em;
-    transition: opacity .3s;
+.footer-content {
+    margin-right: 15%;
 }
 
-.footer-link:hover .footer-logo {
-    opacity: .5;
+.footer-content:last-of-type {
+    margin-right: 0;
 }
 
-.footer-logo-text {
-    opacity: .5;
+.footer-content-title {
+    margin-bottom: 1em;
 }
 
-.footer-link:hover .footer-logo-text {
-    text-decoration: underline;
+.footer-item {
+    padding-bottom: .8em;
+}
+
+.footer-item:last-of-type {
+    padding-bottom: 0;
+}
+
+.footer-link {
+    padding-bottom: .1em;
+    color: #9b9b9b;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-link:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.footer-copyright {
+    margin-top: 5em;
 }
 
 /* Landscape smartphones and below */
@@ -296,10 +287,6 @@ p a:hover {
 
     .footer-item {
         margin: 0 0 3em !important;
-    }
-
-    .footer-logo {
-        margin-bottom: 1em;
     }
 
     .footer-list:last-child {
