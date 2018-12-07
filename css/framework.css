@@ -3,8 +3,7 @@
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 { /* Reboot */
-    margin-top: 0;
-    margin-bottom: .5rem;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -130,57 +129,8 @@ textarea {
 
 /* Links */
 
-.line-link {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    color: #0070c9;
-    background: none;
-    border: none;
-    text-decoration: none !important;
-}
-
-.line-link::before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 2px;
-    background-color: #0070c9;
-    margin-right: .5em;
-    transition: width .2s;
-}
-
-.line-link:hover::before {
-    width: 30px;
-}
-
-.link-style-none {
-    color: inherit !important;
-    text-decoration: none !important;
-}
-
-.link {
-}
-
-.link::after {
-    content: '';
-    display: inline-block;
-    margin-left: .3em;
-    width: .5em;
-    height: .6em;
-    vertical-align: middle;
-    mask-size: 100%;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100%;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-}
-
-.link-white::after {
-    background-color: #0070c9;
-    mask-image: url("/images/arrow-right-thick.svg");
-    -webkit-mask-image: url("/images/arrow-right-thick.svg");
+a.underline:hover {
+    text-decoration: underline;
 }
 
 /** Utilities **/
@@ -219,6 +169,10 @@ textarea {
 
 .text-center {
     text-align: center;
+}
+
+.serif {
+    font-family: "EB Garamond", serif;
 }
 
 /* Images */

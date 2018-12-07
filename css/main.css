@@ -1,3 +1,5 @@
+@import url('https://rsms.me/inter/inter-ui.css');
+
 @keyframes appear {
     from {
         opacity: 0;
@@ -42,10 +44,10 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    font-family: "Inter-UI", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Helvetica Neue", Roboto, Arial, sans-serif;
     line-height: 1.2;
-    color: #282828;
+    color: #111;
 }
 
 main {
@@ -79,7 +81,7 @@ p a:hover {
 }
 
 .hero-inner {
-    position: relative;
+    position: relative; /* for the absolute arrow */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,14 +94,16 @@ p a:hover {
 
 .hero-title {
     margin-bottom: 3rem;
-    font-size: 6em;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5em;
     opacity: 0;
     animation: appear 1s forwards;
 }
 
 .hero-description {
-    margin: 1em 0;
+    margin: 1rem 0;
     font-size: 2em;
     font-weight: 400;
     opacity: 0;
@@ -117,7 +121,33 @@ p a:hover {
 }
 
 .section {
-    padding: 50px;
+    margin: 0 50px;
+    padding: 100px 3rem 3rem;
+}
+
+.section-title {
+    position: relative;
+    margin: 0;
+    font-size: 9em;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 0.6em;
+    z-index: 10;
+}
+
+.section-content {
+    padding: 5em;
+}
+
+.section-background {
+    color: #fff;
+    background-color: #1f4954;
+}
+
+.section-heading {
+    font-family: "EB Garamond", serif;
+    font-size: 4rem;
+    color: #fff;
 }
 
 @media screen and (max-width: 800px) {
@@ -154,39 +184,23 @@ p a:hover {
     text-decoration: none;
 }
 
-/* Dark layout */
-.project::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0;
-    transition: opacity .3s;
-    z-index: 0;
-}
-
-.project-title {
-    font-size: 4em;
-    font-weight: 500;
-    z-index: 1; /* Overlay the black layer on hover */
+.project-title,
+.project-subtitle {
+    transition: transform .2s;
 }
 
 .project-subtitle {
     margin: 1em 0;
-    font-size: 2em;
+    font-size: 1.5rem;
     font-weight: 400;
-    z-index: 1; /* Overlay the black layer on hover */
 }
 
 .project:hover .project-title {
-    text-decoration: underline;
+    transform: translateY(-.3rem);
 }
 
-.project:hover::after {
-    opacity: .3;
+.project:hover .project-subtitle {
+    transform: translateY(.3rem);
 }
 
 .project-bg {
@@ -217,79 +231,5 @@ p a:hover {
 
     .project-subtitle {
         font-size: 1.5em;
-    }
-}
-
-/* Footer */
-
-.footer {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5em 0;
-    font-size: .9em;
-    color: #fff;
-    background-color: #000;
-}
-
-.footer-contents {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 50%;
-}
-
-.footer-content {
-    margin-right: 15%;
-}
-
-.footer-content:last-of-type {
-    margin-right: 0;
-}
-
-.footer-content-title {
-    margin-bottom: 1em;
-}
-
-.footer-item {
-    padding-bottom: .8em;
-}
-
-.footer-item:last-of-type {
-    padding-bottom: 0;
-}
-
-.footer-link {
-    padding-bottom: .1em;
-    color: #9b9b9b;
-    border-bottom: 1px solid transparent;
-}
-
-.footer-link:hover {
-    color: #fff;
-    border-color: #fff;
-}
-
-.footer-copyright {
-    margin-top: 5em;
-}
-
-/* Landscape smartphones and below */
-@media screen and (max-width: 480px) {
-    .footer-inner {
-        padding: 3em 0;
-    }
-
-    .footer-list {
-        flex-direction: column;
-    }
-
-    .footer-item {
-        margin: 0 0 3em !important;
-    }
-
-    .footer-list:last-child {
-        margin-top: 3em;
     }
 }
