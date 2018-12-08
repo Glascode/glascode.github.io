@@ -213,12 +213,17 @@ p a:hover {
     background-size: cover;
 }
 
-#project-bg-thomasferey {
+#project--thomasferey {
     background-image: url("/images/thomasferey.jpg");
 }
 
-#project-bg-melinequerre {
+#project--melinequerre {
     background-image: url("/images/melinequerre.jpg");
+}
+
+#project--frontloops {
+    color: #333;
+    background-color: #ffd257;
 }
 
 @media screen and (max-width: 800px) {
