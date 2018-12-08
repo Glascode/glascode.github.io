@@ -52,6 +52,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    height: 100%;
 }
 
 ul {
@@ -76,53 +77,46 @@ p a:hover {
 /* Hero */
 
 .hero {
-    height: 100vh;
-    min-height: 700px;
-}
-
-.hero-inner {
-    position: relative; /* for the absolute arrow */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+    position: relative;
     height: 100%;
-    background-color: #f4f4f4;
+    min-height: 600px;
+    text-align: center;
 }
 
 .hero-title {
-    margin-bottom: 3rem;
-    font-size: 1rem;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: .5em;
+    letter-spacing: .3em;
     opacity: 0;
     animation: appear 1s forwards;
 }
 
 .hero-description {
-    margin: 1rem 0;
-    font-size: 2em;
+    position: absolute;
+    top: 38%;
+    left: 0;
+    right: 0;
     font-weight: 400;
     opacity: 0;
     animation: appear 1s .5s forwards;
 }
 
-.arrow-down {
-    position: absolute;
-    left: 50%;
-    bottom: 2rem;
-    margin-left: -1.5rem;
-    font-size: 3em;
-    opacity: 0;
-    animation: appear 1s 1s forwards, down 5s 2s infinite;
+.hero-title,
+.hero-description {
+    padding: 0 2rem;
+}
+
+.hero + .section {
+    margin-top: -11rem;
 }
 
 .section {
-    margin: 0 50px;
-    padding: 100px 3rem 3rem;
+    padding: 3rem;
 }
 
 .section-title {
@@ -136,7 +130,7 @@ p a:hover {
 }
 
 .section-content {
-    padding: 5em;
+    padding: 5rem;
 }
 
 .section-background {
@@ -151,21 +145,25 @@ p a:hover {
 }
 
 @media screen and (max-width: 800px) {
-    .hero {
-        height: 90vh;
-        min-height: 90vh;
-    }
-
     .hero-title {
-        font-size: 3em;
-    }
-
-    .hero-description {
-        font-size: 1.5em;
+        font-size: 1rem;
     }
 
     .section {
-        padding: 0;
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .section-title {
+        font-size: 15vw;
+    }
+
+    .section-content {
+        padding: 1rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
     }
 }
 
@@ -182,6 +180,11 @@ p a:hover {
     height: 500px;
     color: #fff;
     text-decoration: none;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 600;
 }
 
 .project-title,
