@@ -1,0 +1,202 @@
+/*
+ * Common styles
+ */
+
+:root {
+    --text-color: #111;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* useful for sticky footer */
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter UI', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Helvetica Neue', Roboto, Arial, sans-serif;
+    line-height: 1.2;
+    color: var(--text-color);
+}
+
+main {
+    flex: 1 0 auto;
+    height: 100%;
+}
+
+/* Hero */
+
+.hero {
+    position: relative;
+    height: 100%;
+    min-height: 600px;
+    text-align: center;
+}
+
+.hero-title {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    font-size: 2.5rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: appear 1s forwards;
+}
+
+.hero-description {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    font-size: 1.3rem;
+    opacity: 0;
+    animation: appear 1s .5s forwards;
+}
+
+.hero-title,
+.hero-description {
+    padding: 0 2rem;
+}
+
+.hero + .section {
+    margin-top: -11rem;
+}
+
+.section {
+    padding: 3rem 8rem;
+}
+
+.section-title {
+    margin-bottom: .5rem;
+    font-size: 6em;
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.section-content {
+    padding: 5rem;
+}
+
+.email {
+    display: inline-block;
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    .hero-title {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 1rem 0;
+        margin: 0;
+    }
+
+    .section-title {
+        font-size: 15vw;
+    }
+
+    .section-content {
+        padding: 1rem;
+    }
+
+    .email {
+        font-size: 1.5rem;
+    }
+}
+
+/* Projects */
+
+.project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    height: 400px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.project-title,
+.project-subtitle {
+    transition: transform .2s;
+}
+
+.project-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.project:hover .project-title {
+    transform: translateY(-.3rem);
+}
+
+.project:hover .project-subtitle {
+    transform: translateY(.3rem);
+}
+
+.project-bg {
+    background-color: #fafafa;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#project--thomasferey {
+    background-image: url("/images/thomasferey.jpg");
+}
+
+#project--melinequerre {
+    background-image: url("/images/melinequerre.jpg");
+}
+
+#project--frontloops {
+    color: #333;
+    background-color: #ffd257;
+}
+
+@media screen and (max-width: 800px) {
+    .project {
+        margin-left: 0;
+        margin-right: 0;
+        height: 300px;
+    }
+
+    .project-title {
+        font-size: 3em;
+    }
+
+    .project-subtitle {
+        font-size: 1.5em;
+    }
+}
