@@ -54,6 +54,7 @@ main {
     right: 0;
     font-size: 2.5rem;
     font-weight: 600;
+    text-transform: uppercase;
     opacity: 0;
     animation: appear 1s forwards;
 }
@@ -95,7 +96,7 @@ main {
 
 .email {
     display: inline-block;
-    margin: 2rem 0;
+    margin-top: 2rem;
     font-size: 2rem;
     text-decoration: none;
 }
@@ -106,12 +107,16 @@ main {
 
 @media screen and (max-width: 800px) {
     .hero-title {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     .section {
         padding: 1rem 0;
         margin: 0;
+    }
+
+    .section:last-of-type {
+        margin-bottom: 3rem;
     }
 
     .section-title {
@@ -122,7 +127,13 @@ main {
         padding: 1rem;
     }
 
+    .section-title,
     .email {
+        margin-left: 1rem;
+    }
+
+    .email {
+        margin-top: 1rem;
         font-size: 1.5rem;
     }
 }
