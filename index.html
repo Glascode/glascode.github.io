@@ -13,23 +13,31 @@ title: Home
 <section class="section">
     <h2 class="section-title">projets/</h2>
 
-    <a class="project project-bg" id="project--frontloops"
-       href="https://glascode.github.io/frontloops" target="_blank">
-        <h2 class="project-title">FrontLoops</h2>
-        <h3 class="project-subtitle">Challenges</h3>
-    </a>
+    <article class="projects">
+        <a class="project project-bg"
+           href="https://glascode.github.io/frontloops">
+            <img class="project-image" src="/images/frontloops.png"
+                 alt="Frontloops challenges">
+            <h3 class="project-title">FrontLoops</h3>
+            <h4 class="project-title d-none">Challenges</h4>
+        </a>
 
-    <a class="project project-bg" id="project--thomasferey"
-       href="https://www.thomasferey.fr" target="_blank">
-        <h2 class="project-title">Thomas Ferey</h2>
-        <h3 class="project-subtitle">Portfolio en ligne</h3>
-    </a>
+        <a class="project project-bg"
+           href="https://www.thomasferey.fr">
+            <img class="project-image" src="/images/thomasferey.png"
+                 alt="Thomas Ferey">
+            <h3 class="project-title">Thomas Ferey</h3>
+            <h4 class="project-title d-none">Portfolio en ligne</h4>
+        </a>
 
-    <a class="project project-bg" id="project--melinequerre"
-       href="https://mwanheda.github.io" target="_blank">
-        <h2 class="project-title">Méline Querré</h2>
-        <h3 class="project-subtitle">Portfolio en ligne</h3>
-    </a>
+        <a class="project project-bg"
+           href="https://mwanheda.github.io">
+            <img class="project-image" src="/images/melinequerre2.png"
+                 alt="Méline Querré">
+            <h3 class="project-title">Méline Querré</h3>
+            <h4 class="project-title d-none">Portfolio en ligne</h4>
+        </a>
+    </article>
 </section>
 
 <section class="section">
@@ -39,3 +47,18 @@ title: Home
         mael.querre@gmail.com
     </a>
 </section>
+
+<script>
+    let projects = document.querySelectorAll('.project');
+
+    projects.forEach(function (project) {
+        project.addEventListener('mouseenter', function () {
+            this.querySelector('h3.project-title').classList.add('d-none');
+            this.querySelector('h4.project-title').classList.remove('d-none');
+        });
+        project.addEventListener('mouseleave', function () {
+            this.querySelector('h3.project-title').classList.remove('d-none');
+            this.querySelector('h4.project-title').classList.add('d-none');
+        });
+    });
+</script>
