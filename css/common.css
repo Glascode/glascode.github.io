@@ -79,19 +79,18 @@ main {
 }
 
 .section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
+    display: flex;
+    justify-content: space-between;
     padding: 3rem 5rem;
 }
 
-.section:last-of-type {
+#contact {
     margin-bottom: 3rem;
-    align-items: end;
+    align-items: flex-end;
 }
 
 .section-title {
-    margin-bottom: 0;
+    margin-right: 10rem;
     font-size: 5em;
     font-weight: 600;
     letter-spacing: -.03em;
@@ -117,17 +116,16 @@ main {
     }
 
     .section {
-        grid-template-columns: 1fr;
-        padding: 1.3rem;
-        margin: 0;
+        flex-direction: column;
+        padding: 1rem;
     }
 
-    .section:last-of-type {
-        grid-gap: 0;
+    #contact {
+        align-items: flex-start;
     }
 
     .section-title {
-        font-size: 15vw;
+        font-size: 13vw;
     }
 
     .section-content {
@@ -135,7 +133,6 @@ main {
     }
 
     .email {
-        margin-top: 1rem;
         font-size: 1.5rem;
     }
 }
@@ -146,20 +143,30 @@ main {
     display: block;
     position: relative;
     text-decoration: none;
+    margin-bottom: 2rem;
 }
 
 .project-image {
     width: 100%;
 }
 
-.project-title {
-    font-size: 1.2rem;
+.project-title,
+.project-subtitle {
+    font-size: 1.3rem;
     font-weight: 500;
-    margin: .5em 0;
+    margin: .5rem 0;
 }
 
-.d-none {
+.project-subtitle {
     display: none;
+}
+
+.project:hover .project-title {
+    display: none;
+}
+
+.project:hover .project-subtitle {
+    display: block;
 }
 
 @media screen and (max-width: 800px) {
@@ -167,7 +174,8 @@ main {
         width: 100%;
     }
 
-    .project-title {
+    .project-title,
+    .project-subtitle {
         font-size: 1.1rem;
     }
 }
