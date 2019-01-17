@@ -52,9 +52,9 @@ main {
     right: 0;
     font-size: 2rem;
     font-weight: 600;
-    text-transform: lowercase;
+    text-transform: uppercase;
     opacity: 0;
-    animation: appear 1s forwards;
+    animation: fade-up 1s forwards;
 }
 
 .hero-description {
@@ -65,7 +65,7 @@ main {
     font-weight: 400;
     font-size: 1.3rem;
     opacity: 0;
-    animation: appear 1s .5s forwards;
+    animation: fade-up 1s .5s forwards;
 }
 
 .hero-title,
@@ -93,11 +93,16 @@ main {
     flex-shrink: 0;
     margin-right: 10rem;
     margin-bottom: 0;
-    font-size: 5em;
+    font-size: 2.5rem;
     font-weight: 600;
-    letter-spacing: -.03em;
-    text-transform: lowercase;
+    text-transform: uppercase;
     line-height: 1;
+}
+
+.section-title::before {
+    content: '/';
+    margin-right: .5rem;
+    color: #19a89c;
 }
 
 .section-content {
@@ -117,7 +122,7 @@ main {
     .section-title {
         position: sticky;
         top: 1em;
-        flex-basis: 3.5em;
+        width: 6em;
     }
 }
 
@@ -136,7 +141,7 @@ main {
     }
 
     .section-title {
-        font-size: 13vw;
+        font-size: 8vw;
         margin-bottom: 2rem;
     }
 
