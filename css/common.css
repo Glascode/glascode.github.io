@@ -106,10 +106,6 @@ main {
         padding-top: 2rem;
     }
 
-    .hero-title {
-        font-size: 2rem;
-    }
-
     .hero-title,
     .hero-description {
         margin-left: 0;
