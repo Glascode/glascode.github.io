@@ -100,16 +100,32 @@ main {
 }
 
 @media screen and (max-width: 800px) {
+    .hero {
+        height: initial;
+        min-height: initial;
+        padding-top: 2rem;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
 
+    .hero-title,
+    .hero-description {
+        margin-left: 0;
+    }
+
+    .hero + .section {
+        margin-top: 0;
+    }
+
     .section {
-        padding: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .section-title {
-        font-size: 8vw;
+        margin-left: 0;
         margin-bottom: 2rem;
     }
 
@@ -118,7 +134,7 @@ main {
     }
 
     .email {
-        font-size: 1.5rem;
+        margin-left: 0;
     }
 }
 
@@ -143,22 +159,28 @@ main {
 }
 
 .project-title,
-.project-subtitle {
+.project-subtitle,
+.project-date {
     font-size: inherit;
 }
 
 @media screen and (max-width: 800px) {
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
     .project {
-        width: 100%;
+        flex-direction: column;
     }
 
-    .project-title,
-    .project-subtitle {
-        font-size: 1.1rem;
+    .project-info {
+        font-size: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+
+    .project-info,
+    .project-image {
+        width: 100%;
     }
 }
 
@@ -167,7 +189,7 @@ main {
 }
 
 .footer-copyright {
-    font-size: .9em;
+    font-size: .9rem;
     color: #999;
     text-align: center;
 }
