@@ -194,3 +194,10 @@ main {
     padding-bottom: 5rem;
     font-size: .8rem;
 }
+
+@media screen and (max-width: 800px) {
+    .footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
