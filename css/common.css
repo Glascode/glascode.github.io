@@ -39,7 +39,7 @@ main {
 /* Hero */
 
 .hero {
-    height: 100vh;
+    height: 80vh;
     min-height: 600px;
     padding-top: 4rem;
 }
@@ -68,14 +68,10 @@ main {
     animation: fade-up 1s .5s forwards;
 }
 
-.hero + .section {
-    margin-top: -11rem;
-}
-
 .section {
     padding-left: 8rem;
     padding-right: 8rem;
-    margin-bottom: 8rem;
+    padding-bottom: 8rem;
 }
 
 .section-title {
@@ -116,13 +112,13 @@ main {
     }
 
     .section {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     .section-title {
         margin-left: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     .section-content {
@@ -140,7 +136,7 @@ main {
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .project-info {
@@ -161,9 +157,19 @@ main {
     font-weight: inherit;
 }
 
+.project-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
 @media screen and (max-width: 800px) {
     .project {
         flex-direction: column;
+    }
+
+    .project-info,
+    .project-image {
+        width: 100%;
     }
 
     .project-info {
@@ -172,12 +178,14 @@ main {
 
     .project-title {
         font-size: 1.8rem;
-        font-weight: 600;
     }
 
-    .project-info,
-    .project-image {
-        width: 100%;
+    .project-subtitle {
+        margin-bottom: 0;
+    }
+
+    .project-date {
+        margin-bottom: 2rem;
     }
 }
 
@@ -193,7 +201,7 @@ main {
 
 @media screen and (max-width: 800px) {
     .footer {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
