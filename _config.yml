@@ -1,11 +1,9 @@
 # Site settings
 title: Glascode
-email: glascode.x@gmail.com
 description: >
   The Glascode website.
 baseurl: ""
 url: "http://glascode.github.io"
-github_username: glascode
 # Build settings
 include: ['_pages']
 kramdown:
