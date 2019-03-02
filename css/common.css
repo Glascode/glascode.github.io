@@ -153,6 +153,10 @@ main {
     width: 70%;
 }
 
+.project-image img {
+    width: 100%;
+}
+
 .project-title,
 .project-subtitle,
 .project-date {
