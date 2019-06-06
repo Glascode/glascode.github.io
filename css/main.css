@@ -5,6 +5,279 @@
 
 @import url('https://rsms.me/inter/inter.css');
 
-@import 'common.css';
-@import 'content/typography.css';
-@import 'utilities/animations.css';
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+:root {
+    --main: #111;
+}
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* useful for sticky footer */
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, 'Segoe UI',
+    'Helvetica Neue', Roboto, Arial, sans-serif;
+    color: var(--main);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Hero */
+
+.hero {
+    height: 80vh;
+    min-height: 600px;
+    padding-top: 4rem;
+}
+
+.hero-function {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hero-title {
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    width: fit-content;
+    font-size: 2.8rem;
+    font-weight: 600;
+    opacity: 0;
+    animation: fade-up 1s forwards;
+}
+
+.hero-description {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0;
+    animation: fade-up 1s .5s forwards;
+}
+
+.section {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 8rem;
+}
+
+.section-title {
+    margin-bottom: 5rem;
+    width: fit-content;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1;
+    background-repeat: repeat-x;
+    background-size: 1px 50%;
+    background-position: 0 100%;
+}
+
+.ml-30 {
+    margin-left: 30%;
+}
+
+.email {
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    .hero {
+        height: initial;
+        min-height: initial;
+        padding-top: 2rem;
+    }
+
+    .hero-title,
+    .hero-description {
+        margin-left: 0;
+    }
+
+    .hero + .section {
+        margin-top: 0;
+    }
+
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .section-title {
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .section-content {
+        padding: 1rem;
+    }
+
+    .email {
+        margin-left: 0;
+    }
+}
+
+/* Projects */
+
+.project {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.project:not(:last-of-type) {
+    margin-bottom: 5rem;
+}
+
+.project-info {
+    width: 30%;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.project-image {
+    position: relative;
+    align-self: flex-start;
+    width: 70%;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+}
+
+.project-image::after {
+    content: 'voir ->';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    background-color: black;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.project-image:hover::after {
+    opacity: .4;
+}
+
+.project-title,
+.project-subtitle,
+.project-date {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.project-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-info,
+    .project-image {
+        width: 100%;
+    }
+
+    .project-info {
+        font-size: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+
+    .project-subtitle {
+        margin-bottom: 0;
+    }
+
+    .project-date {
+        margin-bottom: 2rem;
+    }
+}
+
+.footer {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 5rem;
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/*
+ * Typography
+ */
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: currentColor;
+    text-decoration: underline;
+}
+
+.content p {
+    margin-bottom: 1em;
+}
