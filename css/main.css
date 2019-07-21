@@ -5,7 +5,6 @@
 
 @import url('https://rsms.me/inter/inter.css');
 
-
 @keyframes fade-up {
     from {
         opacity: 0;
@@ -88,14 +87,11 @@ main {
 }
 
 .section-title {
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
     width: fit-content;
-    font-size: 2.8rem;
-    font-weight: 600;
-    line-height: 1;
-    background-repeat: repeat-x;
-    background-size: 1px 50%;
-    background-position: 0 100%;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -.1rem;
 }
 
 .ml-30 {
@@ -127,11 +123,12 @@ main {
     }
 
     .section {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .section-title {
+        font-size: 3.5rem;
         margin-left: 0;
         margin-bottom: 3rem;
     }
@@ -188,13 +185,14 @@ main {
     width: 100%;
     font-size: 1.5rem;
     color: white;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     opacity: 0;
-    transition: opacity .3s;
+    transition: opacity .3s, background-color .3s;
 }
 
 .project-image:hover::after {
-    opacity: .4;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 1;
 }
 
 .project-title,
