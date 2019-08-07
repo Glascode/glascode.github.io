@@ -17,7 +17,7 @@
 }
 
 :root {
-    --main: #111;
+    --main: #000;
 }
 
 *, *::before, *::after {
@@ -41,8 +41,7 @@ body {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', system-ui, 'Segoe UI',
-    'Helvetica Neue', Roboto, Arial, sans-serif;
+    font-family: 'Inter', system-ui, Arial, sans-serif;
     color: var(--main);
 }
 
