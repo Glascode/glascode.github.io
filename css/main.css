@@ -251,26 +251,6 @@ main {
     }
 }
 
-/*
- * Typography
- */
-
-/* Headings */
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-    margin-bottom: .5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 a {
     color: currentColor;
     text-decoration: underline;
@@ -278,4 +258,46 @@ a {
 
 .content p {
     margin-bottom: 1em;
+}
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.error-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.error-description {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .error-page {
+        flex-direction: row;
+    }
+
+    .error-title {
+        margin-right: 1.5rem;
+        margin-bottom: 0;
+        padding-right: 1.5rem;
+        padding-bottom: 0;
+        border-bottom: 0;
+        border-right: 1px solid #e7e7e7;
+    }
+
+    .error-description {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }

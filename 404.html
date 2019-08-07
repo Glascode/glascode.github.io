@@ -3,43 +3,8 @@ layout: default
 title: Page not found
 ---
 
-<style>
-    .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 500px;
-        background-color: #fff;
-    }
-
-    .error-title {
-        font-size: 7rem;
-        font-weight: 500;
-    }
-
-    .error-description {
-        margin: 2rem 0 4rem;
-        width: 50%;
-        font-size: 2em;
-        text-align: center
-    }
-
-    @media screen and (max-width: 800px) {
-        .content {
-            min-height: 90vh;
-        }
-
-        .error-title {
-            font-size: 5rem;
-        }
-
-        .error-description {
-            width: 80%;
-        }
-    }
-</style>
-
-<h1 class="error-title">Erreur 404</h1>
-<h2 class="error-description">La page que vous demandez est introuvable.</h2>
-<a style="font-size: 1.2em;" href="{{ site.url }}">Retour à l'accueil</a>
+<section class="error-page">
+    <h1 class="error-title">Erreur 404</h1>
+    <h2 class="error-description">La page que vous demandez est introuvable.</h2>
+    <!--<a style="font-size: 1.2em;" href="{{ site.url }}">Retour à l'accueil</a>-->
+</section>
