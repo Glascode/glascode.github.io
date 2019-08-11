@@ -5,10 +5,10 @@ title: Home
 
 <section class="section hero">
     <div class="section-inner">
-        <h1 class="section-title hero-title">Maël<br>Querré</h1>
-        <h2 class="hero-description">
-            Étudiant en informatique
-        </h2>
+        <div class="hero-fixed">
+            <h1 class="section-title hero-title">Maël<br>Querré</h1>
+            <div class="hero-description">Étudiant en informatique</div>
+        </div>
     </div>
 </section>
 
@@ -23,8 +23,11 @@ title: Home
                    href="{{ project.link }}">
                     <div class="project-info">
                         <h3 class="project-title">{{ project.title }}</h3>
-                        <h4 class="project-subtitle">{{ project.subtitle }}</h4>
-                        <h4 class="project-date">{{ project.date }}</h4>
+                        <div class="project-subtitle-date">
+                            <h4 class="project-subtitle">{{ project.subtitle }}</h4>
+                            <span class="project-date">{{ project.date }}</span>
+                        </div>
+
                     </div>
                     <div class="project-image-wrapper">
                         <img class="project-image"

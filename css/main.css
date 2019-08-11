@@ -53,10 +53,15 @@ a {
 
 /* Hero */
 
-.hero {
+.section.hero {
     height: 80vh;
     min-height: 500px;
     padding-top: 8rem;
+}
+
+.hero-fixed {
+    position: fixed;
+    z-index: 1;
 }
 
 .hero-title {
@@ -78,9 +83,11 @@ a {
 }
 
 .section.projects {
+    position: relative;
     padding-top: 3rem;
     color: #fff;
     background-color: #000;
+    z-index: 2;
 }
 
 .section-inner {
@@ -168,6 +175,13 @@ a {
     margin-bottom: 1rem;
 }
 
+.project-subtitle-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
 .project-title {
     font-size: 2rem;
     font-weight: 600;
@@ -175,6 +189,7 @@ a {
 }
 
 .project-subtitle {
+    margin-bottom: 0;
     font-size: 1.3rem;
     color: #aaa;
 }
