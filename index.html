@@ -4,29 +4,36 @@ title: Home
 ---
 
 <section class="section hero">
-    <h1 class="hero-title ml-30">Maël<br>Querré</h1>
-    <h2 class="hero-description ml-30">
-        Étudiant en informatique
-    </h2>
+    <div class="section-inner">
+        <h1 class="section-title hero-title">Maël<br>Querré</h1>
+        <h2 class="hero-description">
+            Étudiant en informatique
+        </h2>
+    </div>
 </section>
 
-<section class="section">
-    <h2 class="section-title ml-30">Projets</h2>
+<section class="section projects">
+    <div class="section-inner">
+        <h2 class="section-title">Projets</h2>
 
-    <article class="projects">
-        {% for project in site.data.projects %}
-        <div class="project">
-            <div class="project-info">
-                <h3 class="project-title">{{ project.title }}</h3>
-                <h4 class="project-subtitle">{{ project.subtitle }}</h4>
-                <h4 class="project-date">{{ project.date }}</h4>
-            </div>
-            <a class="project-image"
-               href="{{ project.link }}">
-                <img src="/images/16x9/{{ project.image }}"
-                     alt="{{ project.title }}">
-            </a>
-        </div>
-        {% endfor %}
-    </article>
+        <ol class="projects-list">
+            {% for project in site.data.projects %}
+            <li class="project-item">
+                <a class="project-link text-decoration-none"
+                   href="{{ project.link }}">
+                    <div class="project-info">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <h4 class="project-subtitle">{{ project.subtitle }}</h4>
+                        <h4 class="project-date">{{ project.date }}</h4>
+                    </div>
+                    <div class="project-image-wrapper">
+                        <img class="project-image"
+                             src="/images/16x9/{{ project.image }}"
+                             alt="{{ project.title }}">
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
 </section>
