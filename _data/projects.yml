@@ -2,22 +2,22 @@
   subtitle: Portfolio en ligne
   date: 2019
   link: "https://www.thomasferey.fr"
-  image: "thomasferey.jpg"
+  image: "thomasferey.png"
 - title: Bagpipe music
   subtitle: Archive de partitions
   date: 2019
   link: "https://glascode.github.io/bagpipe-music/"
   image: "bagpipe.png"
-- title: FrontLoops
+- title: Frontloops
   subtitle: Challenges d'intégration
   date: 2019
   link: "https://glascode.github.io/frontloops/"
-  image: "frontloops_alt.png"
+  image: "frontloops.png"
 - title: Surveille Michel
   subtitle: Projet universitaire
   date: 2019
   link: "https://mwanheda.github.io/surveille-michel/"
-  image: "surveille_michel.png"
+  image: "michel.png"
 - title: Méline Querré
   subtitle: Portfolio en ligne
   date: 2019
