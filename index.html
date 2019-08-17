@@ -21,18 +21,14 @@ title: Home
             <li class="project-item">
                 <a class="project-link text-decoration-none"
                    href="{{ project.link }}">
-                    <div class="project-info">
-                        <h3 class="project-title">{{ project.title }}</h3>
-                        <div class="project-subtitle-date">
-                            <h4 class="project-subtitle">{{ project.subtitle }}</h4>
-                            <span class="project-date">{{ project.date }}</span>
-                        </div>
-
-                    </div>
                     <div class="project-image-wrapper">
                         <img class="project-image"
                              src="/images/projects/{{ project.image }}"
                              alt="{{ project.title }}">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <h4 class="project-description">{{ project.description }}</h4>
                     </div>
                 </a>
             </li>

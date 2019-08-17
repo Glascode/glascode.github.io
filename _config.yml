@@ -1,7 +1,6 @@
 # Site settings
-title: Glascode
-description: >
-  The Glascode website.
+title: Maël Querré
+description: Site personnel de Maël Querré
 baseurl: ""
 url: "http://glascode.github.io"
 # Build settings
