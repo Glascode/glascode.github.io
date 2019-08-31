@@ -1,25 +1,25 @@
 - title: Thomas Ferey
-  description: Portfolio en ligne
+  description: Online portfolio
   date: 2019
   link: "https://www.thomasferey.fr"
   image: "thomasferey.png"
 - title: Bagpipe music
-  description: Archive de partitions
+  description: Sheet music archive
   date: 2019
   link: "https://glascode.github.io/bagpipe-music/"
   image: "bagpipe.png"
 - title: Frontloops
-  description: Challenges d'intégration
+  description: Frontend development challenges
   date: 2019
   link: "https://glascode.github.io/frontloops/"
   image: "frontloops.png"
 - title: Surveille Michel
-  description: Projet universitaire
+  description: School project
   date: 2019
   link: "https://mwanheda.github.io/surveille-michel/"
   image: "michel.png"
 - title: Méline Querré
-  description: Portfolio en ligne
+  description: Online portfolio
   date: 2019
   link: "https://mwanheda.github.io"
   image: "melinequerre.png"
