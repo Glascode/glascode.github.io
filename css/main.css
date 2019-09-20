@@ -1,5 +1,5 @@
 /*
- * Glascode v5.4 (https://glascode.github.io)
+ * Glascode v5.5 (https://glascode.github.io)
  * Maël Querré, 2019
  */
 @import url('https://rsms.me/inter/inter.css');
@@ -136,7 +136,7 @@ a, a:hover {
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 4rem;
     grid-column-gap: 3%;
     margin-bottom: 0;
@@ -147,6 +147,8 @@ a, a:hover {
 .project-link {
     display: block;
     color: currentColor;
+    background-color: #1f1f1f;
+    border-radius: 8px;
     transition: transform .25s;
 }
 
@@ -156,28 +158,28 @@ a, a:hover {
 }
 
 .project-info {
-    margin-top: .8rem;
+    padding: 1.5rem 2rem;
 }
 
 .project-title {
     margin-bottom: .3rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: -0.02em;
 }
 
 .project-description {
     margin-bottom: 0;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #ccc;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 .project-image-wrapper {
     position: relative;
     padding-bottom: 60%;
     height: 0;
-    border-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
     overflow: hidden;
 }
@@ -193,14 +195,8 @@ a, a:hover {
 
 @media (max-width: 767px) {
     .projects-list {
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 3rem;
-    }
-}
-
-@media (max-width: 575px) {
-    .projects-list {
         grid-template-columns: 1fr;
+        grid-row-gap: 3rem;
     }
 }
 
