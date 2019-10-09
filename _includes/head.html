@@ -12,7 +12,7 @@
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:url" content="{{ site.url }}">
 
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link rel="shortcut icon" href="/images/favicon.png">
 
