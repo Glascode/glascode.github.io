@@ -1,0 +1,12 @@
+- id: 1
+  title: Cours de l'Intendance
+  path: IMG_1988.jpg
+  created_at: "2019-10-07 09:29:00"
+- id: 2
+  title: Rue Margaux
+  path: IMG_1993.jpg
+  created_at: "2019-10-08 09:24:00"
+- id: 3
+  title: Rue Bouquière
+  path: IMG_2003.jpg
+  created_at: "2019-10-09 09:30:00"
