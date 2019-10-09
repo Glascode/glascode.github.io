@@ -4,29 +4,21 @@ title: Photography
 permalink: /photography
 ---
 
-<style>
-  .icon-image {
-    width: 30px;
-  }
-</style>
-
 <div id="photography">
   <div class="wrapper">
-    <div class="inner section-inner-sm">
+    <div class="inner header">
       <a href="/">
-        <img class="icon-image" src="images/favicon.png" alt="M logo">
+        <img class="logo" src="images/favicon.png" alt="M logo">
       </a>
     </div>
   </div>
 
   <section class="wrapper">
-    <div class="inner section-inner-sm">
+    <div class="inner">
+      <h2>Bordeaux</h2>
       {% for photo in site.data.photos %}
       <img src="images/photography/{{ photo.path }}" alt="{{ photo.title }}">
-      <div class="row">
-        <p class="col">{{ photo.title }}</p>
-        <p class="col">{{ photo.created_at | date: "%e %B %Y %H:%M" }}</p>
-      </div>
+      <p>{{ photo.title }}</p>
       {% endfor %}
     </div>
   </section>

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
- * Glascode v5.5 (https://glascode.github.io)
+ * Glascode v5.6 (https://glascode.github.io)
  * Maël Querré, 2019
  */
 @keyframes fade-up {
@@ -45,8 +45,7 @@ img {
 
 .wrapper {
   padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 3rem; }
+  padding-right: 5%; }
 
 .inner {
   max-width: 1040px;
@@ -58,6 +57,67 @@ img {
   font-weight: 700;
   letter-spacing: -0.03em; }
 
+.footer {
+  flex-shrink: 0;
+  padding: 5rem 5%;
+  color: #fff;
+  background-color: #000;
+  z-index: 2; }
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1040px;
+  margin: auto; }
+
+.external-link--display::after {
+  content: '↗';
+  display: inline-block;
+  margin-left: 0;
+  vertical-align: middle;
+  opacity: 0;
+  transform: translateX(-0.3rem);
+  transition: margin-left .5s, opacity .5s, transform .5s; }
+
+.external-link--display:hover::after {
+  opacity: 1;
+  margin-left: .2rem;
+  transform: translateX(0); }
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1rem; }
+
+.error-title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #e7e7e7; }
+
+.error-description {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400; }
+
+@media (min-width: 768px) {
+  .error-page {
+    flex-direction: row; }
+
+  .error-title {
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+    padding-right: 1.5rem;
+    padding-bottom: 0;
+    border-bottom: 0;
+    border-right: 1px solid #e7e7e7; }
+
+  .error-description {
+    font-size: 1rem;
+    font-weight: 400; } }
 .wrapper.hero {
   height: 80vh;
   min-height: 500px;
@@ -165,73 +225,20 @@ img {
   .projects-list {
     grid-template-columns: 1fr;
     grid-row-gap: 3rem; } }
-.footer {
-  flex-shrink: 0;
-  padding: 5rem 5%;
-  color: #fff;
-  background-color: #000;
-  z-index: 2; }
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1040px;
-  margin: auto; }
-
-.external-link--display::after {
-  content: '↗';
-  display: inline-block;
-  margin-left: 0;
-  vertical-align: middle;
-  opacity: 0;
-  transform: translateX(-0.3rem);
-  transition: margin-left .5s, opacity .5s, transform .5s; }
-
-.external-link--display:hover::after {
-  opacity: 1;
-  margin-left: .2rem;
-  transform: translateX(0); }
-
-@media (max-width: 767px) {
-  .footer {
-    padding-top: 3rem; } }
-.error-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 0 1rem; }
-
-.error-title {
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 1.5rem;
-  border-bottom: 1px solid #e7e7e7; }
-
-.error-description {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 400; }
-
-@media (min-width: 768px) {
-  .error-page {
-    flex-direction: row; }
-
-  .error-title {
-    margin-right: 1.5rem;
-    margin-bottom: 0;
-    padding-right: 1.5rem;
-    padding-bottom: 0;
-    border-bottom: 0;
-    border-right: 1px solid #e7e7e7; }
-
-  .error-description {
-    font-size: 1rem;
-    font-weight: 400; } }
-#photography h1, #photography h2, #photography h3, #photography h4, #photography h5, #photography h6 {
-  font-weight: 600; }
 #photography .inner {
   max-width: 991px; }
+#photography .header {
+  padding: 2rem 0; }
+#photography .logo {
+  width: 2.5rem; }
+#photography h1, #photography h2, #photography h3, #photography h4, #photography h5, #photography h6 {
+  font-weight: 600;
+  margin-bottom: 1rem; }
+#photography img {
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: .2rem; }
+#photography img:not(:first-child) {
+  margin-top: 2rem; }
 
 /*# sourceMappingURL=main.css.map */

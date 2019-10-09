@@ -1,9 +1,28 @@
 #photography {
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-  }
-
   .inner {
     max-width: 991px;
+  }
+
+  .header {
+    padding: 2rem 0;
+  }
+
+  .logo {
+    width: 2.5rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: .2rem;
+  }
+
+  img:not(:first-child) {
+    margin-top: 2rem;
   }
 }
